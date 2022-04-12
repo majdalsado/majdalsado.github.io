@@ -1,1 +1,0 @@
-# majdalsado.github.io
