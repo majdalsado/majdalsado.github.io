@@ -2,7 +2,7 @@
 layout: post
 title: how ai would describe me
 date: 2022-11-13
-categories: ["init"]
+categories: ["gpt-3", "about-me", "hello-world"]
 ---
 
 > The following is a _lightly_ edited snippet of how GPT-3 describes my professional experiences.

@@ -1,9 +1,5 @@
 name: Majd Alsado
-description: "
-  <p>
-    My corner of the internet, where I put out content I'm working on or I find interesting.
-  </p>
-"
+description: "My corner of the internet, where I put out what I'm working on or find interesting."
 location: "📍 Vancouver, Canada"
 email: majd@alsado.ca
 contact:
@@ -16,11 +12,8 @@ contact:
   - title: email
     url: mailto:majd@alsado.ca
 
-interests: "<h4>Currently interested in:</h4>
-<p>
-- 👨🏻‍💻 coliving/coworking community building<br>
-- 🤖 gpt-3<br>
-- 🫱🏻‍🫲🏼 sales<br>
-- 🫒 garlic stuffed olives
-</p>
-"
+interests:
+ - "👨🏻‍💻 coliving/coworking community building"
+ - "🤖 gpt-3"
+ - "🫱🏻‍🫲🏼 sales"
+ - "🫒 garlic stuffed olives"

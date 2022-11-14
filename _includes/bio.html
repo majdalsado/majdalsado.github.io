@@ -3,7 +3,7 @@
     <img src="{{site.baseurl}}/assets/img/profile.jpg" alt="profile picture" width="150" height="150"/>
   </section>
   <section id="bio-wrapper">
-    <div id="text-wrapper">{{site.data.author.description}}<br>{{ site.data.author.location}}</div>
+    <div id="text-wrapper"><p>{{site.data.author.description}}</p><br>{{ site.data.author.location}}</div>
     <div id="social-wrapper">
       {% for i in site.data.author.contact %}
       <a href="{{i.url}}" target="_blank">
@@ -13,7 +13,11 @@
     </div>
   </section>
 </section>
-<br>
 <section id="interests">
-  {{ site.data.author.interests | markdownify }}
+  <h3>currently interested in:</h3>
+  <ul>
+    {% for i in site.data.author.interests %}
+    <li>{{i}}</li>
+    {%endfor%}
+  </ul>
 </section>
