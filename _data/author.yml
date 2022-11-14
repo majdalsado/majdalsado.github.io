@@ -1,23 +1,25 @@
-name: Sharad Raj
-dp: https://avatars2.githubusercontent.com/u/36638057?s=460&u=0cbe4fd6b5a3655d91b3eb86db834d0829a0c086&v=4
+name: Majd Alsado
+dp: https://avatars2.githubusercontent.com/u/34826799?s=460&u=0cbe4fd6b5a3655d91b3eb86db834d0829a0c086&v=4
 description: "
   <p>
-    Developed by Sharad Raj who lives in India building useful things for the world.
+    My corner of the internet, where I put out content I'm working on or I find interesting.
   </p>
-  <br/>
-  <p>
-    You should follow him on <a href='https://github.com/sharadcodes' target='_blank'>Github</a>
-  </P>
 "
-email: dev_sharad@outlook.com
+email: majd@alsado.ca
 contact:
   - title: linkedin
-    url: https://www.linkedin.com/in/srsmaurya
+    url: https://www.linkedin.com/in/majdalsado
   - title: github
-    url: https://github.com/sharadcodes
+    url: https://github.com/majdalsado
   - title: twitter
-    url: https://twitter.com/iamsharadraj
-  - title: dev
-    url: https://dev.to/sharadcodes
+    url: https://twitter.com/TheMajd_
   - title: email
-    url: mailto:dev_sharad@outlook.com
+    url: mailto:majd@alsado.ca
+
+interests: "<h4>Currently interested in:</h4>
+<p>
+- 👨🏻‍💻 coliving/coworking community building<br>
+- 🤖 gpt-3<br>
+- 🫒 stuffed garlic olives
+</p>
+"

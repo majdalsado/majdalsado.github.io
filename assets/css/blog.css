@@ -54,7 +54,9 @@ main {
 }
 #img-wrapper img {
   border-radius: 50%;
-  max-width: 100px;
+  object-fit: none;
+  object-position: 48% 45%;
+  width: 255px;
 }
 #bio-wrapper {
   margin-left: 1rem;

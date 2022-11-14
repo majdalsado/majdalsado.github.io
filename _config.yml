@@ -1,7 +1,5 @@
 title: Majd Alsado
 markdown: kramdown
-url: ""
-baseurl: ""
 
 # for atom feed
 author:
@@ -25,4 +23,4 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
+exclude: ["sitemap.xml", "feed.xml", "README.md"]
