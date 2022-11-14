@@ -22,8 +22,8 @@ title: Majd Alsado
 email: majd@alsado.ca
 description: >- # this means to ignore newlines until "baseurl:"
   My corner of the internet, to post what I'm doing and what's currently interesting for me.
-baseurl: "alsado.ca" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://alsado.ca" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TheMajd_
 github_username:  majdalsado
 
