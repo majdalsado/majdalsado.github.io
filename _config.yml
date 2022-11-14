@@ -28,7 +28,7 @@ twitter_username: TheMajd_
 github_username:  majdalsado
 
 # Build settings
-theme: jekyll-athena
+theme: minima
 plugins:
   - jekyll-feed
   
