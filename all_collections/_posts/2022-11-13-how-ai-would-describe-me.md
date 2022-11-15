@@ -12,7 +12,7 @@ I'm a civil engineer by trade and a multi-faceted builder with a passion for pro
 
 # 🚀 what am i pursuing now
 
-I'm currently working as a Solutions Consultant at Ada, helping build confidence in our product with prospective customers by demonstrating how Ada can deliver everything we promise them. 
+I'm currently working as a Solutions Consultant at Ada, honing my sales skills and helping build confidence in our Conversational AI product with prospective customers by demonstrating how Ada can deliver value to their business. 
 
 # 🔨 what i also do
 
