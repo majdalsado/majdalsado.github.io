@@ -9,7 +9,7 @@ description: Learn about the impact of language models on plagiarism in academia
 > Luddites destroy industrial machines, 1812
 
 # 💡 intro to the problem 
-Plagiarism in academia has been a long-standing problem, but with the rise of advanced language models, the issue has taken on a new form. With the ability to generate comprehensive reports, essays, and other written assignments, students can now easily pass off AIs work as their own. Needless to say this is a cause for concern for many educational institutions whose look to ensure their students are indeed learning and honing their skills in their field of study.
+Plagiarism in academia has been a long-standing problem, but with the rise of advanced language models, the issue has taken on a new form. With chatGPT's ability to generate comprehensive reports, essays, and other written assignments, students can now easily pass off AI work as their own. Needless to say this is a cause for concern for many educational institutions who look to ensure that their students are indeed learning and honing their skills in their field of study.
 
 # 🤔 is it plaigirism? 
 > **plagiarize**, verb, _pla·​gia·​rize_<br>
