@@ -6,7 +6,7 @@
     <div id="text-wrapper"><p>{{site.data.author.description}}</p><br>{{ site.data.author.location}}</div>
     <div id="social-wrapper">
       {% for i in site.data.author.contact %}
-      <a href="{{i.url}}" target="_blank">
+      <a href="{{i.url}}" target="_blank" aria-label="my {{ i.title }}">
         <img src="{{site.baseurl}}/assets/icons/{{i.title}}.svg" alt="" />
       </a>
       {%endfor%}
@@ -14,7 +14,7 @@
   </section>
 </section>
 <section id="interests">
-  <h3>currently interested in:</h3>
+  <h2 style="font-size: 1.17em">currently interested in:</h2>
   <ul>
     {% for i in site.data.author.interests %}
     <li>{{i}}</li>
