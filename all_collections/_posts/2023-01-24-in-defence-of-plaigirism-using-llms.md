@@ -3,6 +3,7 @@ layout: post
 title: in defence of plaigirism using LLMs
 date: 2023-01-24
 categories: ["gpt-3", "chatgpt"]
+description: Learn about the impact of language models on plagiarism in academia and explore the arguments for and against the use of LLMs in the writing process.
 ---
 ![Luddites destroy industrial machines, 1812](https://images.immediate.co.uk/production/volatile/sites/7/2020/02/19-GettyImages-1185854652-cdd0aab.jpg?webp=true)
 > Luddites destroy industrial machines, 1812

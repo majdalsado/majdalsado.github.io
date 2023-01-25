@@ -3,6 +3,7 @@ layout: post
 title: how ai would describe me
 date: 2022-11-13
 categories: ["gpt-3", "about-me", "hello-world"]
+description: I had GPT-3 take in my linkedin profile and generate a mini article about my professional experience, here's what it generated
 ---
 
 > The following is a _lightly_ edited snippet of how GPT-3 describes my professional experiences.
