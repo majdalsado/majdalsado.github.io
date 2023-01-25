@@ -41,8 +41,8 @@ The risk LLMs present today for plaigirism is scary and educational institutions
 Educational institutions instead need to find the right balance of guidelines and procedures for the use of LLMs, treating them not as plaigirism of ther people's work but rather as a tool to improve writing skills and creativity, advancing humanity to our next evolution.
 
 # 🔭 risks and the future 
-One big risk I see is that in a few years time, will the AI generated data over take human generated data leading to silos in creativity? 
+One risk I see rising in the near future, is that when the amount of AI-generated text overtakes original human text, will we see ourselves in a silo or echo chamber of the same type of text being rewritten over and over? A silo of creativity?
 
-Or do we as humans egotistically believe that an AI cannot be more creative than us and this won't be a problem?
+Or, is this just us as humans egotistically believing that an AI cannot be more creative than us?
 
 I don't know the answer, but I'd love to hear what you think.
