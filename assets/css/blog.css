@@ -91,6 +91,13 @@ ul li::before {
   transform: scale(1.2);
 }
 
+#interests a{
+  color: var(--white-2);
+}
+#interests a:hover{
+  font-style: italic;
+}
+
 /* article section */
 
 .articles {
