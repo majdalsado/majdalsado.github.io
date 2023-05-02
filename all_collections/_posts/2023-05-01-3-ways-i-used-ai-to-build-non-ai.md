@@ -6,13 +6,14 @@ categories: ["ai", "colive values"]
 description: Learn how I overcame the challenges of developing colive values, a platform for remote workers to find communities that align with their values and interests, by using cutting-edge AI tools and techniques.
 ---
 ![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png)
-When I was impacted by a large layoff last month, only one thought crossed my mind. **Builder time 👷‍♂️ - but what to build?**
+
+When I was impacted by a large layoff 2 months ago, only one thought crossed my mind. **Builder time 👷‍♂️ - but what to build?**
 
 With the constant stream of GPT-powered products being released, I considered jumping on the trend cycle and trying my hand at building an exciting new AI tool.
 
 But I didn't want to build something just for the sake of technology. I wanted to build something that would solve a real problem.
 
-*Instead of focusing on building an AI product, I'd rather use AI to help me build a product.*
+**Instead of focusing on building an AI product, I want to use AI to help me build a product.**
 
 Enter colive values, an idea I had for a platform where modern remote workers can find communities to stay in that align with their values and interests. A project I've been interested in for a while, but never had the time to seriously look into.
 
