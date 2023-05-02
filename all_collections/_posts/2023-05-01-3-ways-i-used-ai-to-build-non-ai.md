@@ -25,7 +25,7 @@ The story of how that idea came to fruition and how I validated it is for anothe
 First up is Github Copilot, a GPT-powered tool that integrates into your code editor and offers autocomplete as you type. 
 
 ## How I used it
-Having Copilot on is like having a coding partner constantly working alongside me and pushing me along whenever I'm stumped. It analyzes my codebase and constantly provides helpful suggestions and completing my code.
+Having Copilot on is like having a coding partner constantly working alongside me and pushing me along whenever I'm stumped. It analyzes my codebase and constantly provides helpful suggestions and completes my code.
 
 Here it is in action, seamlessly completing code according to a comment I wrote:
 ![Github Copilot in action](https://alsado.ca/assets/img/article_imgs/github-copilot.gif)
@@ -35,10 +35,10 @@ This helped me focus on the harder problems and build fast.
 ## Lessons Learned
 - Copilot's ability to take your codebase into context and suggest project-specific code is incredible.
 - It works well ~80% of the time
-- It's best used for monotonous tasks like writing boilerplate code, but falls apart for debugging or refactoring.
+- It's best used for monotonous tasks like writing boilerplate code but falls apart for debugging or refactoring.
 
 # #2 👩🏻‍💻 ChatGPT, the trusted consultant
-You know ChatGPT, OpenAI's chat-interface to it's gpt-3.5 model. It's the one that's been making the rounds everywhere.
+You know ChatGPT, OpenAI's chat interface to its gpt-3.5 model. It's the one that's been making the rounds everywhere.
 
 ## How I used it
 ChatGPT was a valuable tool that helped me build colive values. It served as my consultant in everything from:
@@ -80,7 +80,7 @@ Qualifying and classifying my dataset of 400+ communities.
 
 The task wasn't simple. I needed to skim through each community in my database, understand its vibe, and match it against a list of defined values and interests which best fit it using reasoning and logic.
 
-Before the drop of GPT I would have just outsourced this task to a freelancer on Upwork. But now I had a new tool in my arsenal.
+Before the drop of GPT, I would have just outsourced this task to a freelancer on Upwork. But now I had a new tool in my arsenal.
 
 The process was a messy one, deep in the world of jupyter scripts, pandas dataframes, expensive GPT-4 API calls, and many json files named something like this `complete-data-v4-mar24-revised-fix-FINAL-processed.json`
 
