@@ -17,7 +17,7 @@ But I didn't want to build something just for the sake of technology. I wanted t
 
 Enter colive values, an idea I had for a platform where modern remote workers can find communities to stay in that align with their values and interests. A project I've been interested in for a while, but never had the time to seriously look into.
 
-The story of how that idea came to fruitition and how I validated it is for another time.
+The story of how that idea came to fruition and how I validated it is for another time.
 
 #### Today I'd like to share 3 ways I used AI to help me overcome challenges and develop colive values.
 
