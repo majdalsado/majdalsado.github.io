@@ -5,6 +5,7 @@ date: 2023-05-01
 categories: ["ai", "colive values"]
 description: Learn how I overcame the challenges of developing colive values, a platform for remote workers to find communities that align with their values and interests, by using cutting-edge AI tools and techniques.
 ---
+![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png)
 When I was impacted by a large layoff last month, only one thought crossed my mind. **Builder time 👷‍♂️ - but what to build?**
 
 With the constant stream of GPT-powered products being released, I considered jumping on the trend cycle and trying my hand at building an exciting new AI tool.
