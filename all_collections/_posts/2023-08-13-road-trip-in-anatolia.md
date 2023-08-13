@@ -13,18 +13,20 @@ we start the journey in the mediterranean city of Mersin, I borrow my uncle's ve
 
 ![Adana-Erdemli Highway](/assets/img/article_imgs/turkey-roadtrip/1-road.jpeg)
 
-Starting in Mersin, we head out to Kapadokya region to meet with friends
+Starting in Mersin, we head out to Kapadokya region to meet with friends.
+
 Exploring the ruins across Goreme, Nevşehir, and everything in between.
+
 Our planned journey looks something like this:
 
 ![Planned route](/assets/img/article_imgs/turkey-roadtrip/2-map.jpg)
 
 As we leave Mersin behind and cross into the Tausus Mountains, the landscapes dramatically transforms from the vibrant blues of the Mediterranean to the earthy tones of Anatolia.
 
-![Heading into the heart of Anatolia](/assets/img/article_imgs/turkey-roadtrip/3-terrain.jpg)
-![Demirkazik mountain, 3756m](/assets/img/article_imgs/turkey-roadtrip/4-terrain.jpg)
+![Heading into the heart of Anatolia](/assets/img/article_imgs/turkey-roadtrip/3-terrain.jpeg)
+![Demirkazik mountain, 3756m](/assets/img/article_imgs/turkey-roadtrip/4-terrain.jpeg)
 
-Our journey takes us through many small villages. We decide to stop by one the town of Yesilgolcuk as we noticed a town market was happening.
+Our journey takes us through many small villages. We decide to stop by one, the town of Yesilgolcuk, as we noticed a town market was happening today.
 
 ![Town market in Yesilgolcuk](/assets/img/article_imgs/turkey-roadtrip/5-town-market.jpg)
 
@@ -36,7 +38,7 @@ Ottoman Sultans were known to [safeguard culinary methods and recipes](https://m
 
 This lunch ran about 200 TRY (~$10 CAD). The exchange rate was definitely in our favour on this trip.
 
-As we approach the Kapadokya region, we begin to notice hundreds of little caves along the road. These caves are belived to be dating back to the 7-8th centuries.
+As we approach the Kapadokya region, we begin to notice hundreds of little caves along the road. These caves are believed to date back to the 7-8th centuries.
 
 ![Kebab and Chicken](/assets/img/article_imgs/turkey-roadtrip/7-mountain-caves.jpg)
 
