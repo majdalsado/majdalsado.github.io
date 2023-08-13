@@ -3,11 +3,15 @@ layout: post
 title: road trip in anatolia
 date: 2023-08-13
 categories: ["travel"]
-description: join me for a road trip in the heart of Anatolia, Turkiye where I explore Mersin, Adana, the underground cities of Derinkuyu, Kapadokya and Kayseri
+description: join me for a road trip in the heart of Anatolia, Türkiye where I explore Mersin, Adana, the underground cities of Derinkuyu, Kapadokya and Kayseri
 ---
-Join me for a roadtrip in the heart of Turkish Anatolia, where I explore the underground city of Derinkuyu and Kapadokya.
+Join me for a roadtrip in the heart of Turkish Anatolia, where I explore Kapadokya and the underground city of Derinkuyu.
 
-Day 1.
+This trip was in January 2023, before the disastrous earthquake which shook this region. To support the communities affected by this disaster, consider donating to a relief fund [such as this one](https://www.islamicreliefcanada.org/emergencies/turkey-syria-earthquake).
+
+# Day 1.
+
+![Mersin](/assets/img/article_imgs/turkey-roadtrip/0-mersin.jpg)
 
 we start the journey in the mediterranean city of Mersin, I borrow my uncle's vehicle and we hit the beautiful road.
 
@@ -15,20 +19,20 @@ we start the journey in the mediterranean city of Mersin, I borrow my uncle's ve
 
 Starting in Mersin, we head out to Kapadokya region to meet with friends.
 
-Exploring the ruins across Goreme, Nevşehir, and everything in between.
+Exploring the ruins across Göreme, Nevşehir, and everything in between.
 
 Our planned journey looks something like this:
 
 ![Planned route](/assets/img/article_imgs/turkey-roadtrip/2-map.jpg)
 
-As we leave Mersin behind and cross into the Tausus Mountains, the landscapes dramatically transforms from the vibrant blues of the Mediterranean to the earthy tones of Anatolia.
+As we leave Mersin behind and cross into the Taurus Mountains, the landscapes dramatically transforms from the vibrant blues of the Mediterranean to the earthy tones of Anatolia.
 
 ![Heading into the heart of Anatolia](/assets/img/article_imgs/turkey-roadtrip/3-terrain.jpeg)
 ![Demirkazik mountain, 3756m](/assets/img/article_imgs/turkey-roadtrip/4-terrain.jpeg)
 
-Our journey takes us through many small villages. We decide to stop by one, the town of Yesilgolcuk, as we noticed a town market was happening today.
+Our journey takes us through many small villages. We decide to stop by one, the town of Yeşilgölcük, as we noticed a town market was happening today.
 
-![Town market in Yesilgolcuk](/assets/img/article_imgs/turkey-roadtrip/5-town-market.jpg)
+![Town market in Yeşilgölcük](/assets/img/article_imgs/turkey-roadtrip/5-town-market.jpg)
 
 After exploring this little market, we got pretty hungry so we found a local meat shop and had a delicious lunch.
 
@@ -60,9 +64,9 @@ We instead opt'd to go hike down to the valley and explore its many scattered ca
 
 This one was an old (defaced) Christian church. Notice the face of Jesus scratched off and the faded red cross.
 
-![Defaced cave church walls](/assets/img/article_imgs/turkey-roadtrip/11-climbing-cave.jpg)
+![Defaced cave church walls](/assets/img/article_imgs/turkey-roadtrip/33-defaced-church.jpg)
 
-Here was a cave in much better condition, at the time of our visit it was being renovated.
+Here's a cave in much better condition, at the time of our visit it was being renovated.
 
 ![Cave church in much better condition](/assets/img/article_imgs/turkey-roadtrip/12-church-cave-2.jpg)
 
@@ -74,7 +78,7 @@ From the ancient Hittite civilization to the early Christians seeking refuge in 
 
 ![In the valley near Uçhisar](/assets/img/article_imgs/turkey-roadtrip/14-landscape.jpg)
 
-After some technical mishaps, we finally meet up with some friends. Turns out there's alot more of them than can fit in our little Fiat.
+After some technical mishaps, we finally meet up with some friends. Turns out there's a lot more of them than can fit in our little Fiat.
 
 We make it work and drive up to Kayseri to drop them off at the airport.
 
@@ -84,7 +88,7 @@ After dropping off our friends at the Kayseri airport. We check in at the Radiss
 
 ![The turkish bath at the hotel](/assets/img/article_imgs/turkey-roadtrip/16-spa.jpg)
 
-Day 2
+# Day 2
 
 We wake up to a beautiful winter morning in the city of Kayseri. It looks like a typical large Turkish city with tons of similar large apartment buildings in grids.
 
@@ -92,7 +96,7 @@ We wake up to a beautiful winter morning in the city of Kayseri. It looks like a
 
 As we hit the town square, retired men are drinking Cay (Tea) and playing backgammon.
 
-![Backgammon and tea](/assets/img/article_imgs/turkey-roadtrip/18-backgammon-tea.jpeg)
+![Backgammon and tea](/assets/img/article_imgs/turkey-roadtrip/18-backgammon-tea.jpg)
 ![Pigeons around the city center](/assets/img/article_imgs/turkey-roadtrip/27-pigeons.jpg)
 
 We go for a simple turkish breakfast. Some Sucuklu Tost (Grilled cheese and turkish sausage) and Cay.
@@ -103,15 +107,17 @@ Turkish people drink lots of tea. In Kayseri, a special variety we noticed many 
 
 ![Oralet](/assets/img/article_imgs/turkey-roadtrip/20-oralet.jpeg)
 
-Looking to see what Kayseri has to offer, we go explore the Kayseri castle, dating back to 238 AD.
+Looking to see what Kayseri has to offer in our limited time here, we go explore the Kayseri castle, dating back to 238 AD.
 
 ![Kayseri Castle walls](/assets/img/article_imgs/turkey-roadtrip/21-kayseri-castle.jpg)
 
+Ottoman map of Kayseri showing the castle (bottom) and surrounding landscape
+
 ![Ottoman map of Kayseri showing the castle (bottom) and surrounding landscape](/assets/img/article_imgs/turkey-roadtrip/22-kayseri-map.jpeg)
 
-This castle has had many ups and downs throughout its history. It's had multiple cycles of being abandonded, used a slum, then internal demolition to get rid of the slum encampements. It wasn't until funding was made available in 2016 that a restoration project began creating a museum and showcasing the history of the castle inside.
+This castle has had many ups and downs throughout its history. It's had multiple cycles of being abandoned, used a slum, then internal demolition to get rid of the slum encampments. It wasn't until funding was made available in 2016 that a restoration project began creating a museum and showcasing the history of the castle inside.
 
-![Ottoman map of Kayseri showing the castle (bottom) and surrounding landscape](/assets/img/article_imgs/turkey-roadtrip/23-kayseri-inside.jpg)
+![Inside of Kayseri castle](/assets/img/article_imgs/turkey-roadtrip/23-kayseri-inside.jpg)
 
 The castle has many artisan workshops. This one is a traditional Ney maker. A turkish flute.
 
@@ -130,13 +136,16 @@ We hit the road yet again, this time taking a scenic mountainous route. We catch
 The weather was perfect with clear skies, high visibility, and beautiful views.
 
 ![Valley road](/assets/img/article_imgs/turkey-roadtrip/29-road.jpg)
+
+View of the valley from up top
+
 ![View of the valley from up top](/assets/img/article_imgs/turkey-roadtrip/28-valley.jpg)
 
 As we get closer to Derinkuyu we start to notice thousands of caves alongside the road.
 
 ![Little caves and homes along the hill](/assets/img/article_imgs/turkey-roadtrip/30-caves.jpg)
 
-This region felt a bit eery as we hardly saw anyone in sight. These homes built into the hill we suspect were abandonded not too long ago.
+This region felt a bit eery as we hardly saw anyone in sight. These homes built into the hill we suspect were abandoned not too long ago.
 
 ![More homes built into the hill](/assets/img/article_imgs/turkey-roadtrip/31-caves.jpg)
 
@@ -144,32 +153,76 @@ Arrived.
 
 ![Derinkuyu Underground City](/assets/img/article_imgs/turkey-roadtrip/32-derinkuyu.jpg)
 
-TO BE COMPLETED
-<!-- 
-explain the history of derinkuyu
+Carved beneath Kapadokya landscapes we've seen so far is the Derinkuyu Underground City.
 
-< image >
+A marvel of ancient engineering and dating back to the 7-8th centuries AD, this subterranean city was created to shelter thousands from invasions and persecution. 
 
-School 
+![Stairs](/assets/img/article_imgs/turkey-roadtrip/34-derinkuyu.jpg)
 
-< image >
+It extends over eight levels and ~85 metres. This shaft is part of the system which ensures air circulation throughout the city.
 
-We hit the road again, hoping to make it back to Adana at a reasonable hour.
+![air shaft](/assets/img/article_imgs/turkey-roadtrip/35-air-hole.jpeg)
 
-< road trip >
+Historians believe the city was inhabited by up to 20,000 residents, which means it had full infrastructure to support living such as churches, stables, food storage areas, and this school.
 
-Quick stop by a road side meat shop for some wings and kebab.
+![School](/assets/img/article_imgs/turkey-roadtrip/36-school.jpg)
 
-< Food >
+Seriously interesting.
 
-Road accident. Talk about how quick the road crew came out, cleaned up, and traffic resumed.
+![shot of the boys](/assets/img/article_imgs/turkey-roadtrip/37-underground.jpg)
 
-< accident >
+We make it up back to civilization and head to our next destination, hoping to make it there at a reasonable hour.
 
-Arrive in Adana. 7:30pm. -->
+![road](/assets/img/article_imgs/turkey-roadtrip/38-road.jpg)
 
+Along the highway we encounter a major road accident. A semi flipped over and its cargo was dumped all over the road. The entire highway was backed up.
 
+![road accident](/assets/img/article_imgs/turkey-roadtrip/39-highway.jpg)
 
+We assumed we'd be stuck waiting for a while considering we're in the middle of nowhere. But, to our surprise, road crews came in, cleaned up the roads, towed away the semi, and opened the road within only 20-30mins of waiting.
 
+![highway crews](/assets/img/article_imgs/turkey-roadtrip/40-highway.jpg)
 
+It's clear this country puts a lot of emphasis on clean, operational highway roads.
 
+We're welcome to Adana by the Sabancı Central Mosque. 7:30pm.
+
+It's one of the largest mosques in Turkey with a towering 6 minarets.
+
+![mosque](/assets/img/article_imgs/turkey-roadtrip/41-mosque.jpg)
+
+Our arrival in Adana marks the beginning to the end of our trip. We rest up after an eventful day.
+
+# Day 3
+
+Friday morning in Adana means it's time to go for Friday Prayers. We know exactly which mosque to go to.
+
+![mosque](/assets/img/article_imgs/turkey-roadtrip/42-mosque.jpg)
+
+The grand size of the mosque makes it humbling to be inside.
+
+![mosque](/assets/img/article_imgs/turkey-roadtrip/43-mosque.jpg)
+
+![mosque](/assets/img/article_imgs/turkey-roadtrip/44-mosque.jpg)
+
+After prayer, we go for a traditional turkish breakfast. Delicious
+
+![breakfast](/assets/img/article_imgs/turkey-roadtrip/45-breakfast.jpg)
+
+After breakfast we head out to see the Seyhan Dam Lake. A wonderful recreational area in Adana with plenty of restaurants and activities to do around.
+
+![Seyhan Dam](/assets/img/article_imgs/turkey-roadtrip/46-seyhan.jpg)
+
+We enjoy some sahlep by the lake. A hot floral milky dessert topped with cinnamon and nuts. Perfect in the winter.
+
+![Sahlep](/assets/img/article_imgs/turkey-roadtrip/47-sahlep.jpg)
+
+We head out back to the meditarranean sea in the afternoon, wrapping up our coastal trip.
+
+![Road back to Mersin](/assets/img/article_imgs/turkey-roadtrip/48-road.jpg)
+
+and back at the sea the next morning.
+
+![Mersin](/assets/img/article_imgs/turkey-roadtrip/49-mersin.jpg)
+
+Thank you for joining me on this adventure.
