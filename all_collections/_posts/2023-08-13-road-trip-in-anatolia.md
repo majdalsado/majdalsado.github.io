@@ -13,13 +13,13 @@ This trip was in January 2023, before the disastrous earthquake which shook this
 
 ![Mersin](/assets/img/article_imgs/turkey-roadtrip/0-mersin.jpg)
 
-we start the journey in the mediterranean city of Mersin, I borrow my uncle's vehicle and we hit the beautiful road.
+we start the journey in the mediterranean city of Mersin and hit the road going North to the heart of Anatolia.
 
 ![Adana-Erdemli Highway](/assets/img/article_imgs/turkey-roadtrip/1-road.jpeg)
 
 The plan is to explore the Kapadokya region, stop by Kayseri, then come back to Adana and eventually Mersin.
 
-Across Kapadokya I'm most looking forward to exploring the ruins in Göreme, Nevşehir, Derinkuyu Underground City and everything in between.
+I'm most looking forward to exploring the ruins in Göreme, Nevşehir, Derinkuyu Underground City and everything in between.
 
 Our planned journey looks something like this:
 
@@ -42,11 +42,11 @@ Ottoman Sultans were known to [safeguard culinary methods and recipes](https://m
 
 This lunch ran about 200 TRY (~$10 CAD). The exchange rate was definitely in our favour on this trip.
 
-As we approach the Kapadokya region, we begin to notice hundreds of little caves along the road. These caves are believed to date back to the 7-8th centuries.
+As we approach the our destination, we begin to notice hundreds of little caves along the road. These caves are believed to date back to the 7-8th centuries.
 
 ![Kebab and Chicken](/assets/img/article_imgs/turkey-roadtrip/7-mountain-caves.jpg)
 
-We finally arrive in the Kapadokya region in the town of Ucisar. 
+We finally arrive in the town of Uçhisar. 
 
 While many people assume Kapadokya is a city, it's actually more of a region comprised of valleys and small towns you can drive through.
 
@@ -64,7 +64,7 @@ It's also the down seasons so not many tourists to be seen.
 
 ![Hot air balloon](/assets/img/article_imgs/turkey-roadtrip/10-balloon.jpg)
 
-We instead opt'd to go hike down to the valley of [Göreme National Park](https://en.wikipedia.org/wiki/G%C3%B6reme_National_Park) and explore its many scattered caves. 
+We instead opt to go hike down to the valley of [Göreme National Park](https://en.wikipedia.org/wiki/G%C3%B6reme_National_Park) and explore its many scattered caves. 
 
 ![Getting in some of these was a bit difficult](/assets/img/article_imgs/turkey-roadtrip/11-climbing-cave.jpg)
 
@@ -98,7 +98,7 @@ We drive up to Kayseri and drop off our friends at the Kayseri airport.
 
 Afterwards, we decide to spend the night in Kayseri and check in at the Radisson Blu Hotel. 
 
-We mostly chose this hotel because it features a Turkish bath/spa. 
+We mostly chose this hotel because it features a Turkish hammam, a public bath. 
 
 Much needed after a long day of exploring.
 
@@ -131,17 +131,17 @@ Looking to see what Kayseri has to offer in our limited time here, we go explore
 
 ![Kayseri Castle walls](/assets/img/article_imgs/turkey-roadtrip/21-kayseri-castle.jpg)
 
-An Ottoman map of Kayseri showcasing the castle (bottom) and surrounding landscape
+An Ottoman map of Kayseri on display in Kayseri Castle, showcasing the castle (bottom) and surrounding landscape
 
 ![Ottoman map of Kayseri showing the castle (bottom) and surrounding landscape](/assets/img/article_imgs/turkey-roadtrip/22-kayseri-map.jpeg)
 
 Kayseri Castle has had many ups and downs throughout its history. It underwent several phases of abandonment, transformations into slum settlements, and even internal demolitions to clear the slum encampments. 
 
-However, in 2016, with the availability of funding, an restoration project was initiated. This initiative led to the restoration of the castle's structural integrity and transformed it into a touristic attraction featuring a museum and artisanal shops.
+However, in 2016, with the availability of funding, a restoration project was initiated. This initiative led to the restoration of the castle's structural integrity and transformed it into a touristic attraction featuring a museum and artisanal shops.
 
 ![Inside of Kayseri castle](/assets/img/article_imgs/turkey-roadtrip/23-kayseri-inside.jpg)
 
-A traditional Ney artisan. A turkish flute.
+An Ottoman Ney maker inside the castle. Thr Ney is a type of flute.
 
 ![Traditional Ney maker inside Kayseri Castle](/assets/img/article_imgs/turkey-roadtrip/24-ney.jpg)
 
@@ -153,9 +153,9 @@ A spiced cured meat.
 
 On the itinerary for today is the underground city of Derinkuyu. 
 
-We hit the road yet again, this time taking a scenic mountainous route. 
+We hit the road yet again, taking a scenic mountainous route. 
 
-We catch a breathtaking glimpse of [Mount Erciyes](https://en.wikipedia.org/wiki/Mount_Erciyes).
+We catch a breathtaking glimpse of [Mount Erciyes](https://en.wikipedia.org/wiki/Mount_Erciyes), elevation 3,917m.
 
 ![Mount Erciyes in the background](/assets/img/article_imgs/turkey-roadtrip/26-mount-erciyes.jpg)
 
@@ -163,11 +163,11 @@ The weather was perfect with clear skies, high visibility, and beautiful views.
 
 ![Valley road](/assets/img/article_imgs/turkey-roadtrip/29-road.jpg)
 
-View of the valley from up top
+View of the valley from up top.
 
 ![View of the valley from up top](/assets/img/article_imgs/turkey-roadtrip/28-valley.jpg)
 
-As we get closer to Derinkuyu we start to notice thousands of caves alongside the road.
+As we get closer to Derinkuyu we start to notice thousands of caves nestled alongside the hills.
 
 ![Little caves and homes along the hill](/assets/img/article_imgs/turkey-roadtrip/30-caves.jpg)
 
