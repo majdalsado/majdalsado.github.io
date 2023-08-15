@@ -1,7 +1,7 @@
 ---
 layout: post
 title: road trip in anatolia
-date: 2023-08-13
+date: 2023-08-14
 categories: ["travel"]
 description: join me for a road trip in the heart of Anatolia, Türkiye where I explore Mersin, Adana, the underground cities of Derinkuyu, Kapadokya and Kayseri
 ---
