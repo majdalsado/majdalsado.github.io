@@ -4,6 +4,8 @@ title: 3 ways I used AI to build a non-AI product
 date: 2023-05-01
 categories: ["ai", "colive values"]
 description: Learn how I overcame the challenges of developing colive values, a platform for remote workers to find communities that align with their values and interests, by using cutting-edge AI tools and techniques.
+feature_image: "/assets/img/article_imgs/openai_colivevalues.png"
+feature_image_position: "95px -373px"
 ---
 ![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png)
 

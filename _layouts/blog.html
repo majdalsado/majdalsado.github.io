@@ -7,7 +7,7 @@
       <section class="articles">
         <h2>Posts</h2>
         {% for post in site.posts %}
-        <article class="article">
+        <article class="article" style="background: linear-gradient(to right, var(--gray-3) 40%, #25282c69), url('{{post.feature_image}}') no-repeat right; background-position: {{ post.feature_image_position | default: 'center' }}; background-size: cover; background-color: var(--gray-3);">
           <h2 class="article-title">
             <a href="{{site.baseurl}}{{post.url}}"> {{post.title}} </a>
           </h2>
