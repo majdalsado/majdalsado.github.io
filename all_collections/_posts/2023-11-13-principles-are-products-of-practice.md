@@ -28,7 +28,7 @@ My immediate reaction was in defence of practical ergonomics. As a self-taught d
 
 I believe principles should not stifle progress in the name of upholding theory and principle.
 
-But this is more than just a defensive gut reaction, this tweet highlights a fundamental issue with theory-based learning, and a common misunderstanding of what breeds innovation.
+But this is more than just a defensive gut reaction, this tweet highlights a fundamental issue with theory-based learning, and a common misunderstanding of what breeds innovation and how principles work in practice.
 
 ### Success Breeds Principles
 
@@ -52,10 +52,10 @@ This is not clear for a student, and often causes misguidance. The student who l
 
 There's a lot to learn from principles and theory. But we should always re-evaluate and push its limits by adapting it to the world around us, constantly challenging if it truly makes things easier/faster/cheaper/better.
 
-If there's a way to make things more ergonomic, we should try that no matter if it violates principle. It's from the success or failure of that experiment, that the magic of evolution is unlocked, a principle is founded, and our progress is pushed one step forward.
+If there's a way to make things more ergonomic, we should try that no matter if it violates principles. It's from the success or failure of that experiment, that the magic of evolution is unlocked, a principle is founded, and our progress is pushed one step forward.
 
 This is experimental evolution and it's the foundation of principles, capitalism, and life.
 
-It's important for the makers of policies and standards to be connected with real-time experimentation going on, and not in silo, to constantly adapt, iterate, and refine standards and principles according to real-world outcomes.
+This is also why it's important for the makers of policies and standards to be connected with the real-time experimentation in a market, and not in silo, to constantly adapt, iterate, and refine standards and principles according to real-world outcomes.
 
-_In short:_ Remember that success defines principles, not the other way around. We must write today's rules with an eye on the successes of tomorrow, not yesterday.
+_In short:_ Remember that success defines principles, not the other way around. We must write today's rules with an eye on what will work tomorrow, not yesterday.
