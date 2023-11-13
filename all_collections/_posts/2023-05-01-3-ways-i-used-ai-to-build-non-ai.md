@@ -10,17 +10,15 @@ reading_time: 4
 ---
 ![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png)
 
-With the world taken by recent breakthroughs in AI, my entrepreneurial spirit awaked and I started pondering how I can use these new breakthroughs to my advantage
+A couple months ago, the wave of AI/LLM breakthroughs took the world by storm and I found myself contemplating how to leverage these advances to my advantage.
 
-With the constant stream of GPT-powered products being released, I considered jumping on the trend cycle and trying my hand at building an exciting new AI-based tool.
+Seeing the constant stream of GPT-powered products being released on Product Hunt every day, I considered jumping on the trend and trying my hand at building an exciting new AI-based tool.
 
 But I didn't want to build something just for the sake of technology. I wanted to build something that would solve a real problem.
 
 **Instead of focusing on building an AI product, I want to use AI to help me build a product.**
 
-Enter colive values, an idea I had for a platform where remote workers can find like-minded communities to temporarily work and stay in that with their values and interests. This was an idea I've contemplated for a while, but never had the time/resources to seriously look into.
-
-The story of how that idea came to fruition and how I validated it is for another time.
+Enter colive values, an idea I had for a platform for remote workers to discover like-minded communities to temporarily work and stay in, that align with their values or interests. This was an idea I've contemplated for a while, but never had the time/resources to seriously look into.
 
 #### Today I'd like to share 3 ways I used AI to help me overcome challenges and build colive values.
 
