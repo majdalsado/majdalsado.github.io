@@ -54,8 +54,8 @@ There's a lot to learn from principles and theory. But we should always re-evalu
 
 If there's a way to make things more ergonomic, we should try that no matter if it violates principles. It's from the success or failure of that experiment, that the magic of evolution is unlocked, a principle is founded, and our progress is pushed one step forward.
 
-This is experimental evolution and it's the foundation of principles, capitalism, and life.
+This is experimental evolution and it's the foundation of principles, capitalism, and life. We must write today's rules with an eye on what will work tomorrow, not yesterday.
 
 This is also why it's important for the makers of policies and standards to be connected with the real-time experimentation in a market, and not in silo, to constantly adapt, iterate, and refine standards and principles according to real-world outcomes.
 
-_In short:_ Remember that success defines principles, not the other way around. We must write today's rules with an eye on what will work tomorrow, not yesterday.
+_In short:_ Remember success defines principles, not the other way around. So developers, go ahead and take the ergonomical profitable path, in violation of the HTML semantics, and pioneer a better way for the future.
