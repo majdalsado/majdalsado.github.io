@@ -59,3 +59,5 @@ This is experimental evolution and it's the foundation of principles, capitalism
 This is also why it's important for the makers of policies and standards to be connected with the real-time experimentation in a market, and not in silo, to constantly adapt, iterate, and refine standards and principles according to real-world outcomes.
 
 _In short:_ Remember success defines principles, not the other way around. So developers, go ahead and take the ergonomical profitable path, in violation of the HTML semantics, and pioneer a better way for the future.
+
+[Follow me on twitter](https://twitter.com/themajd_)
