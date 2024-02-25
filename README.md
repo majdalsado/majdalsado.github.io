@@ -1,1 +1,1 @@
-# Jekyll Theme Serial Programmer
+# My Personal Site and Blog
