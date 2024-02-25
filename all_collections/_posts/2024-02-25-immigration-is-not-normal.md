@@ -70,7 +70,7 @@ Beyond the fact that this knowledge has withstood the test of time, this knowled
 
 We must also recognize that the information readily available online or imparted in Western education largely stems from Eurocentric sources. These can be different or not aligned with the experiences of people from a non-European ethnicity. 
 
-This discrepancy is becoming more apparent in fields like medicine, where an expanding body of research suggests (ethnic backgrounds can have a significant impact on the application of medicine)[https://www.nejm.org/doi/full/10.1056/nejmsb025007].
+This discrepancy is becoming more apparent in fields like medicine, where an expanding body of research suggests [ethnic backgrounds can have a significant impact on the application of medicine](https://www.nejm.org/doi/full/10.1056/nejmsb025007).
 
 ## Back to the Bedouin
 
