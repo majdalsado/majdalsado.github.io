@@ -33,9 +33,11 @@ reading_time: 2
 - Holding this as a core value leaves my processing power to focus on the things that truly matter and are worth its effort.
  -->
 
-Recently, I was in a tricky social situation that challenged one of my core principles: "Always be truthful." It was a moment that made me question whether this principle was worth standing by at all costs. 
+Recently, I was in a tricky social situation that challenged one of my core principles: "Avoid lying at all costs." It was a situation that made me reconsider the harshness of this principle.
 
-After giving it much thought, I'm again confident: Yes I should, and here's why.
+However after giving it more thought, I'm again confident: 
+
+**You should always avoid lying and default to honesty at all costs, and here's why.**
 
 ## Making Decisions
 Doing things well—whether it's a physical skill or a mental or social ability—requires making good decisions. 
@@ -50,7 +52,7 @@ Take for example a social situation. When you observe something, there's a sort 
 
 This layer considers the context of the situation, logic, strategy, social norms, etiquette, relevance, and much more. 
 
-It's a mental exercise that demands significant power, while some people have a large capacity to juggle many different constraints, we're all ultimately limited to a certain level of cognitive capacity.
+It's a mental exercise that demands significant power, while some people have a large capacity to juggle many different constraints, we're all ultimately limited to some level of cognitive capacity.
 
 ## The Burden of Lies
 Everyone develops their own philosophy to prioritize these constraints, focusing on what matters most to them. 
@@ -60,7 +62,7 @@ I believe maintaining a lie consumes an unworthy portion of mental energy. While
 As these lies accumulate, you find yourself constructing stories, detached from reality, that are inherently fragile. This not only consumes your cognitive resources but also distracts you from more valuable functions. The mental effort required to sustain a lie is far greater than that needed to uphold the truth.
 
 ![truth vs lie](/assets/img/article_imgs/truth.png)
-This is why I choose to avoid lying.
+This is why I choose to avoid lying at all costs.
 
 ## The Simplicity of Truth
 
