@@ -101,16 +101,30 @@ ul li::before {
 /* article section */
 
 .articles {
-  display: grid;
-  row-gap: 2rem;
-  margin: 2rem 0 3rem 0;
+  margin-top: 1rem;
 }
-.articles .article {
+
+.articles .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.articles .container > div {
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.articles .container > div .article {
   padding: 2rem;
   background: var(--gray-3);
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  height: 100%;
 }
+
 .articles .article .article-title,
 .articles .article .article-title a {
   color: var(--white-2);
@@ -158,8 +172,11 @@ ul li::before {
   header .site-title {
     font-size: 3rem;
   }
-  .articles {
-    row-gap: 1.2rem;
+  .articles .container > div {
+    width: 100%;
+    padding: 0rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
   }
 }
 
