@@ -1,7 +1,7 @@
 ---
 layout: post
 title: after 19,314 lines of code, i'm shutting down my project
-date: 2024-12-16
+date: 2024-12-17
 categories: ["coliving", "remote work", "personal growth"]
 description: learnings from building colive values as a solo developer
 feature_image_position: "0"
@@ -105,10 +105,14 @@ The final decision came down to simple math and personal priorities. The economi
 
 ## Looking Forward
 
-While colive values is shutting down, the experience has been invaluable. Writing almost 20k lines of code, in a project where shipping every feature was a new learning experience, came with huge set of technical learning.
+While colive values is shutting down, I still believe the idea has potential, it just requires a slightly different execution.
 
-Further, growing the brand from zero provided me with experience in branding, design, and growth marketing that I couldn’t have learned in any other way. 
+Nonetheless, the experience has been invaluable for me. Writing almost 20k lines of code, in a project where shipping every feature was a new learning experience, came with huge set of technical learning.
+
+Growing the brand from zero provided me with experience in branding, design, and growth marketing that I couldn’t have learned in any other way. 
 
 Most importantly, I've learned crucial lessons about what it takes to build a sustainable business. I’ll be taking these learnings for my next adventure. 
 
-Stay tuned for my next venture - this time with a more focused scope and clearer path to sustainability. Sometimes the best way forward is to know when to let go and apply your learnings to the next opportunity. That's exactly what I plan to do.
+I'm now working on my next venture, this time with a more focused scope and clearer path to sustainability. Sometimes the best way forward is to know when to let go and apply your learnings to the next opportunity. That's exactly what I plan to do. 
+
+Stay tuned for an official announcement soon!
