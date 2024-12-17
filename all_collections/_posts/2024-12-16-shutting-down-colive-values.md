@@ -4,7 +4,6 @@ title: after 19,314 lines of code, i'm shutting down my project
 date: 2024-12-16
 categories: ["coliving", "remote work", "personal growth"]
 description: learnings from building colive values as a solo developer
-feature_image: "/assets/img/article_imgs/colive-values-banner.png"
 feature_image_position: "0"
 reading_time: 5
 ---
