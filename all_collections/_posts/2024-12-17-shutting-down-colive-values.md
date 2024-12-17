@@ -35,12 +35,12 @@ Some of the fragmented mess of finding a coliving. The sources varied across Goo
 
 ### Finding an Edge in a Crowded Market
 
-Building a marketplace is notoriously difficult - you need both supply (coliving hosts) and demand (remote workers) to create value. I knew I needed a creative approach to crack this chicken-and-egg problem.
+Building a marketplace is notoriously difficult - you need both supply (coliving hosts) and demand (remote workers) to create value. I knew I needed a creative approach to crack this chicken-and-egg problem. Especially as a team of one.
 
 My edge came from two creative solutions:
 
 1. **Web Scraping at Scale**: Instead of chasing hosts one by one, I built scrapers to aggregate coliving communities automatically. This came with its own challenges - including legal threats from major players in the space - but it helped us build initial inventory quickly.
-2. **Early AI Integration**: Before ChatGPT became household name, I was already leveraging Language Models to categorize communities, analyze reviews, and even assist with development. My background in AI gave me a head start in utilizing these tools effectively.
+2. **Early AI Integration**: Having had worked at an AI start-up, I had a bit of a head start in utilizing LLMs effectively. Before ChatGPT became household name, I used GPT models to help me categorize and qualify communities en masse, analyze reviews to understand the community values, and of course to assist with the development of the platform.
 
 This worked well (besides the lawsuit scare 😅) at getting things started. Although hosts were initially skeptical, most were willing to give colive values a shot especially because I’d only reach out after we’ve already secured an interested guest looking to give them their money.
 
@@ -60,7 +60,7 @@ colive values MVP:
 
 #### 2. Use social channels
 
-Some of our best insights came from engaging directly with our target audience. Reddit posts, Slack channels, and other social platforms provided invaluable feedback and early user interest. The enthusiasm from these communities kept me motivated during tough times.
+Our best insights came from engaging directly with our target audience. Reddit posts, Slack channels, and other social platforms provided invaluable feedback and early user interest. The enthusiasm from these communities kept me motivated during tough times.
 
 Users validating the idea keep you going:
 ![Users validating the idea](/assets/img/article_imgs//shutting-down-colive/reddit-validation-2.webp)
@@ -78,7 +78,7 @@ As the project grew, so did the complexity of managing it. I was juggling multip
 - Community management
 - Industry networking
 
-Without proper systems in place, this became overwhelming for a small team.
+Without proper systems in place, this became overwhelming for a solo developer. At this point I did bring on a partner to help offload some of this work, but it was still too much for a part-time founder to handle effectively.
 
 ### Underestimating Scope
 
