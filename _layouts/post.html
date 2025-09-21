@@ -8,6 +8,7 @@
     <section class="article">
       <div class="article-header">
         <h2 class="article-title">{{page.title}}</h2>
+        <div class="article-subtitle">{{page.description}}</div>
         <small class="date">{{page.date | date_to_string}} • {{ page.reading_time }} min read</small>
         <div class="categories">
           {% for c in page.categories %}
