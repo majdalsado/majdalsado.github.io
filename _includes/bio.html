@@ -1,9 +1,11 @@
 <section id="bio">
   <section id="img-wrapper">
-    <img src="{{site.baseurl}}/assets/img/profile.webp" alt="profile picture" width="150" height="150"/>
+    <img src="{{site.baseurl}}/assets/img/profile.webp" alt="profile picture" width="150" height="150" />
   </section>
   <section id="bio-wrapper">
-    <div id="text-wrapper"><p>{{site.data.author.description}}</p><br>{{ site.data.author.location}}</div>
+    <div id="text-wrapper">
+      <p>{{site.data.author.description}}</p><br>{{ site.data.author.location}}
+    </div>
     <div id="social-wrapper">
       {% for i in site.data.author.contact %}
       <a href="{{i.url}}" target="_blank" aria-label="my {{ i.title }}">
@@ -17,7 +19,6 @@
   <h2 style="font-size: 1.17em">currently working on:</h2>
   <ul>
     <li><a href="https://bidaya.ai">📝 ai to find and win more government contracts</a></li>
-    <li><a href="https://nameguessr.com">🤖 fun ai identity guesser</a></li>
     <li><a href="https://apps.shopify.com/better-b2b-shipping">📦 better b2b shipping on shopify</a></li>
   </ul>
 </section>
