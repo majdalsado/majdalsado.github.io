@@ -17,7 +17,11 @@ For example, one town that Katalin lived in is named `Kisújszállás`... take a
 
 Naturally, I struggled to pronounce it and skipped over it, but as it kept surfacing, I eventually had to look it up: `KEE-shoo-ee-shaah-lahsh`.
 
-This pattern seemed off to me, so I delved deeper into why it exists. What I found was an obscure international standard that has quietly created a minor yet annoying issue for millions of people.
+This got me thinking about something that's always bothered me in English writing: Why do we preserve the original spelling of latin-based foreign names, but transliterate names from other scripts?
+
+It seemed like a lazy double standard, so today I decided to dive deeper. As it turns out, it might not just be laziness, the culprit seems to be an obscure international aviation standard that has quietly created reading difficulties for millions of people.
+
+Let's get into it.
 
 # The core issue
 
@@ -29,15 +33,15 @@ If the whole goal of writing is to communicate an idea clearly, then including f
 
 My thesis:
 
-> Just as we transliterate Russian names to their English equivalents, we should do the same for any foreign language, even if it uses a Latin script. This ensures **readers have a smooth, intuitive, and inclusive reading experience**.
+Just as we transliterate Russian names to their English spelling, we should do the same for all foreign languages, even if they use a Latin script. This ensures **readers have a smooth, intuitive, and inclusive reading experience**.
 
-# Deeper dive
+# What i mean
 
 You've probably noticed this before.
 
 If you see a Bosnian name in an English setting, it will likely be spelled in Bosnian even though the letters would not be pronounced correctly by an English speaker. (In Bosnian, a `J` is pronounced closer to `y`, a `ć` is pronounced closer to `ch`, & more)
 
-Most Latin languages face this issue, some with more severe differences than others:
+Most Latin languages have these differences in pronunciation, with some more severe than others.
 
 - **Hungarian**
   - tends to be the most difficult for English speakers, I especially noticed this in Katalin's biography.
@@ -70,13 +74,13 @@ When someone learns a name in a mispronounced way, they will spread it in a misp
 
 # the bureaucratic root cause
 
-At first, I assumed this was cultural pride. Just people insisting on keeping their native name spelling, and getting away with it because it resembles English. A sort of way to affirm identity.
+At first, I assumed this could be cultural pride. People insisting on keeping their native name spelling, and getting away with it because it resembles English. A sort of way to affirm identity.
 
-It also felt like a weird Eurocentric double standard. _(Latin)_ European names get to retain their spellings, but non-European names have to be anglicized?
+It also felt like a weird Eurocentric double standard. _(Latin)_ European names get to retain their spellings, but non-European names have to be anglicized, even if they're both equally non-English?
 
-While those reasons might be partially true, as it turns out, they might not be the full picture.
+While those reasons could be partially true, they might not be the full picture.
 
-The more likely reason for this pattern is **bureaucracy**.
+The more likely reason for this pattern seems to be **bureaucracy**.
 
 ## ICAO Document 9303 Part 7
 
@@ -95,7 +99,7 @@ Here's the list of mandatory transliterations:
 - ß → SS
 - þ → TH
 
-As you can see, that list is not very comprehensive. And it definitely doesn't cover any of the issues we've mentioned above.
+The list is not very comprehensive. And it definitely doesn't cover any of the issues we've mentioned above.
 
 ## cascading consequences
 
