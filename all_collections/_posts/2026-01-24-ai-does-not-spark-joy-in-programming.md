@@ -9,8 +9,6 @@ reading_time: 2
 comments: true
 ---
 
-# ai does not spark joy in programming
-
 I feel the need to express my recent disenchantment with “programming” due to recent advancements in AI coding assistants.
 
 Although AI has given me tools I couldn’t imagine I’d have access to in my lifetime, I feel that a certain joy of programming craftsmanship has been stolen.
