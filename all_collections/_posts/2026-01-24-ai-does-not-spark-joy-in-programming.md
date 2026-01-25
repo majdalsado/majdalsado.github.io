@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ai does not spark joy in programming"
-date: 2026-09-02
+date: 2026-01-24
 categories: ["thoughts", "ai", "programming"]
 description: "ai does not spark joy in programming"
 feature_image: "/assets/img/article_imgs/ai-takes-away-the-joy-of-programming.webp"
