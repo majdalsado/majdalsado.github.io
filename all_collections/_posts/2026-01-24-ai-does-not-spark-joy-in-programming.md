@@ -23,7 +23,7 @@ Contrasting that to the general craft of being a Software Engineer
 
 > The discipline of designing and applying robust systems to solve complex user problems
 
-It’s clear when I lay it out like this that AI has sort of stripped a certain joy and excitement away from programming.
+It's specifically when I split up programming from general software engineering like this, that AI has stripped a certain joy and excitement away from the craft programming.
 
 Some joys I’ve had in my programming journey:
 
