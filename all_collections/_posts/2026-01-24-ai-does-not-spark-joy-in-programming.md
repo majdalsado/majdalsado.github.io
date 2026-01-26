@@ -11,7 +11,7 @@ comments: true
 
 I feel the need to express my recent disenchantment with “programming” due to recent advancements in AI coding assistants.
 
-Although AI has given me tools I couldn’t imagine I’d have access to in my lifetime, I feel that a certain joy of programming craftsmanship has been stolen.
+Although AI has given me tools I couldn’t imagine I’d have access to during my lifetime, I feel that a certain joy of the programming craft has been stolen.
 
 Let me clarify what I mean by programming here:
 
