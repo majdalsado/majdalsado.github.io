@@ -1,31 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-
-<body>
-  <main>
-    {% include header.html %} {% include bio.html %}
-    <section class="articles">
-      <h2 class="articles-label">posts</h2>
-      <ul class="post-index">
-        {% for post in site.posts %}
-        <li class="post-row">
-          <a class="post-link" href="{{site.baseurl}}{{post.url}}">
-            <span class="post-title">{{post.title}}</span>
-            <span class="post-date">{{post.date | date: "%Y"}}</span>
-          </a>
-          <div class="categories">
-            {% for c in post.categories %}
-            <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{c}}</a>
-            {% endfor %}
-          </div>
-        </li>
-        {%endfor%}
-      </ul>
-    </section>
-    {% include footer.html %}
-  </main>
-  {% include category-modal.html%}
-</body>
-
-</html>
+---
+layout: default
+---
+{% include bio.html %}
+<section class="articles">
+  <h2 class="articles-label">posts</h2>
+  <ul class="post-index">
+    {% for post in site.posts %}
+    <li class="post-row">
+      <a class="post-link" href="{{site.baseurl}}{{post.url}}">
+        <span class="post-title">{{post.title}}</span>
+        <span class="post-date">{{post.date | date: "%Y"}}</span>
+      </a>
+      <div class="categories">
+        {% for c in post.categories %}
+        <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{c}}</a>
+        {% endfor %}
+      </div>
+    </li>
+    {%endfor%}
+  </ul>
+</section>
