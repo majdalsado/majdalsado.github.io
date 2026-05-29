@@ -1,10 +1,11 @@
 <section id="bio">
   <section id="img-wrapper">
-    <img src="{{site.baseurl}}/assets/img/profile.webp" alt="profile picture" width="150" height="150" />
+    <img src="{{site.baseurl}}/assets/img/profile.webp" alt="profile picture" width="180" height="180" />
   </section>
   <section id="bio-wrapper">
     <div id="text-wrapper">
-      <p>{{site.data.author.description}}</p><br>{{ site.data.author.location}}
+      <p>{{site.data.author.description}}</p>
+      <p class="bio-location">{{ site.data.author.location }}</p>
     </div>
     <div id="social-wrapper">
       {% for i in site.data.author.contact %}

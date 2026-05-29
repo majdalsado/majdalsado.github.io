@@ -6,25 +6,22 @@
   <main>
     {% include header.html %} {% include bio.html %}
     <section class="articles">
-      <h2>Posts</h2>
-      <div class="container">
+      <h2 class="articles-label">posts</h2>
+      <ul class="post-index">
         {% for post in site.posts %}
-        <div>
-          <article class="article"
-            style="background: linear-gradient(to top, #25282ca1 40%, #25282ce3), url('{{post.feature_image}}') no-repeat right; background-size: cover; background-color: var(--gray-3);">
-            <h2 class="article-title">
-              <a href="{{site.baseurl}}{{post.url}}"> {{post.title}} </a>
-            </h2>
-            <small class="date">{{post.date | date_to_string}} • {{ post.reading_time }} min read</small>
-            <div class="categories">
-              {% for c in post.categories %}
-              <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{c}}</a>
-              {% endfor %}
-            </div>
-          </article>
-        </div>
+        <li class="post-row">
+          <a class="post-link" href="{{site.baseurl}}{{post.url}}">
+            <span class="post-title">{{post.title}}</span>
+            <span class="post-date">{{post.date | date: "%Y"}}</span>
+          </a>
+          <div class="categories">
+            {% for c in post.categories %}
+            <a href="#!" data-base-url="{{site.baseurl}}" class="category">{{c}}</a>
+            {% endfor %}
+          </div>
+        </li>
         {%endfor%}
-      </div>
+      </ul>
     </section>
     {% include footer.html %}
   </main>
