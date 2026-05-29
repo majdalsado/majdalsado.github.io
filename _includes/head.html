@@ -10,7 +10,6 @@
   {% if page.layout == "post" %}
   <title>{{page.title}} | {{site.title}}</title>
   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/post.css" />
-  <!-- <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css" /> -->
   {% else %}
   <title>{{site.title}} | {{page.title}}</title>
   <link rel="stylesheet" href="{{site.baseurl}}/assets/css/blog.css" />
@@ -20,7 +19,19 @@
   {% if page.layout == "post" %}
   <script defer src="{{site.baseurl}}/assets/js/lbox.js"></script>
   {% endif %}
-  <meta name="description" content="{{page.description}}">
+  <meta name="description" content="{{ page.description }}" />
+  <!-- social share / open graph -->
+  {% assign share_image = page.feature_image | default: "/assets/img/profile.webp" %}
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ share_image | absolute_url }}" />
+  <meta name="twitter:card" content="{% if page.feature_image %}summary_large_image{% else %}summary{% endif %}" />
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="{{ share_image | absolute_url }}" />
+  <meta name="twitter:creator" content="@TheMajd_" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
