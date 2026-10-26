@@ -23,4 +23,4 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["sitemap.xml", "feed.xml", "README.md"]
+exclude: ["sitemap.xml", "feed.xml", "README.md", "_writer"]
