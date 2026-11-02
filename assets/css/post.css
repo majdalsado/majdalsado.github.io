@@ -240,3 +240,18 @@
     padding: var(--space-md);
   }
 }
+
+.content .article-figure {
+  margin: var(--space-md) 0;
+}
+.content .article-figure img {
+  display: block;
+  height: auto;
+  margin: 0;
+}
+.content .article-figure figcaption {
+  margin-top: var(--space-2xs);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
