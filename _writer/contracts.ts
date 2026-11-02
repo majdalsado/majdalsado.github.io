@@ -28,6 +28,7 @@ export const saveSchema = z.object({
   version: z.string(),
   body: z.string(),
   meta: metadataSchema.optional(),
+  updateFilename: z.boolean().optional(),
 });
 export type SaveInput = z.infer<typeof saveSchema>;
 export const moveSchema = z.object({
@@ -49,6 +50,8 @@ export const gitSchema = z.object({
   ahead: z.number(),
   behind: z.number(),
   files: z.array(gitFileSchema),
+  existingPostChanges: z.array(z.string()),
+  pushRevision: z.string(),
   log: z.array(
     z.object({ id: z.string(), message: z.string(), when: z.string() }),
   ),

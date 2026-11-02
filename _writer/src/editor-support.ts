@@ -5,9 +5,9 @@ import {
   drawSelection,
   placeholder,
 } from "@codemirror/view";
-import { defaultKeymap, history, historyKeymap } from "@codemirror/commands";
+import { defaultKeymap, history, historyKeymap, indentWithTab } from "@codemirror/commands";
 import { markdown, markdownKeymap } from "@codemirror/lang-markdown";
-import { syntaxHighlighting, HighlightStyle } from "@codemirror/language";
+import { syntaxHighlighting, HighlightStyle, indentUnit } from "@codemirror/language";
 import { searchKeymap, highlightSelectionMatches } from "@codemirror/search";
 import { tags } from "@lezer/highlight";
 export const style = HighlightStyle.define([
@@ -38,6 +38,8 @@ export {
   drawSelection,
   placeholder,
   defaultKeymap,
+  indentWithTab,
+  indentUnit,
   history,
   historyKeymap,
   markdown,
@@ -46,3 +48,6 @@ export {
   searchKeymap,
   highlightSelectionMatches,
 };
+
+export { spelling } from "./spelling.ts";
+export { formatting } from "./formatting.ts";

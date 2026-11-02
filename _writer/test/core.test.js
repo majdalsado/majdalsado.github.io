@@ -84,3 +84,34 @@ test("commit includes both sides of a staged rename and preserves other staging"
   await b.commit([moved.path], "Move draft");
   assert.equal((await b.git(["status", "--porcelain"])).trim(), "");
 });
+
+test("draft filenames follow titles; post renames are explicit and collision-safe", async (t) => {
+  const b = await fixture(t);
+  let draft = await b.create("Old title");
+  const oldPath = draft.path;
+  draft = await b.save({ ...draft, body: "Keep this", meta: { title: "New title" } });
+  assert.equal(draft.path, "all_collections/_drafts/new-title.md");
+  await assert.rejects(fs.access(path.join(b.root, oldPath)));
+  await b.create("Taken");
+  await assert.rejects(b.save({ ...draft, meta: { title: "Taken" } }), /already has/);
+  assert.equal((await b.read(draft.path)).body, "Keep this");
+  let post = await b.move({ ...draft, kind: "post", date: "2026-11-01" });
+  const original = post.path;
+  post = await b.save({ ...post, meta: { title: "Final title", date: "2026-11-02" } });
+  assert.equal(post.path, original);
+  post = await b.save({ ...post, updateFilename: true });
+  assert.equal(post.path, "all_collections/_posts/2026-11-02-final-title.md");
+  assert.equal(post.body, "Keep this");
+});
+
+test("push warnings include changed and renamed remote posts but not new posts", async (t) => {
+  const b = await fixture(t);
+  const p = await b.move({ ...await b.create("Live"), kind: "post", date: "2026-11-01" });
+  await b.commit([p.path], "Initial post");
+  await b.git(["branch", "remote-snapshot"]);
+  await b.git(["branch", "--set-upstream-to=remote-snapshot"]);
+  const renamed = await b.save({ ...p, meta: { title: "Renamed" }, updateFilename: true });
+  const fresh = await b.move({ ...await b.create("New"), kind: "post", date: "2026-11-01" });
+  await b.commit([p.path, renamed.path, fresh.path], "Rename and add");
+  assert.deepEqual((await b.status()).existingPostChanges, [p.path]);
+});

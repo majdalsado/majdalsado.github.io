@@ -1,3 +1,4 @@
+import { readRoute, routeURL, type Route } from "./url-state.ts";
 import { api } from "./api.ts";
 import {
   errorMessage,
@@ -69,6 +70,51 @@ let config: Config,
   busy = false;
 let metadata: Metadata = {};
 const app = $("#app");
+let restoringRoute = false;
+let routeQueue = Promise.resolve();
+function currentRoute(): Route {
+  if (screen === "editor" && current) return {
+    screen: "editor", file: current.path,
+    ...(previewOpen ? { panel: "preview" as const } :
+      document.querySelector("#details:not([hidden])") ? { panel: "details" as const } : {}),
+  };
+  return { screen: screen === "git" ? "git" : "library" };
+}
+function syncURL(replace = false) {
+  if (restoringRoute) return;
+  const url = routeURL(currentRoute());
+  if (url !== location.pathname + location.search + location.hash)
+    history[replace ? "replaceState" : "pushState"](null, "", url);
+}
+function rememberPosition() {
+  if (!editor || !current) return;
+  try { sessionStorage.setItem("writer-position:" + current.path, JSON.stringify({
+    anchor: editor.state.selection.main.anchor, head: editor.state.selection.main.head,
+    scroll: editor.scrollDOM.scrollTop,
+  })); } catch {}
+}
+async function restoreRoute(route: Route) {
+  restoringRoute = true;
+  try {
+    await save();
+    if (route.screen === "editor") {
+      if (screen !== "editor" || current?.path !== route.file) await openPost(route.file);
+      setDetails(route.panel === "details");
+      if (previewOpen !== (route.panel === "preview")) await togglePreview();
+    } else if (route.screen === "git") await git();
+    else await library();
+  } catch (e) {
+    if (!editor || !current) await library();
+    error(e);
+  } finally {
+    restoringRoute = false;
+    syncURL(true);
+  }
+}
+window.addEventListener("popstate", () => {
+  const target = readRoute(location.search);
+  routeQueue = routeQueue.then(() => restoreRoute(target)).catch(error);
+});
 function icon(name: string) {
   const icons: Record<string, string> = {
     back: "←",
@@ -146,16 +192,24 @@ async function save() {
   )
     .then((result) => {
       current = result;
+      if (post.path !== result.path) {
+        const cachedRecovery = localStorage.getItem(recoveryKey(post.path));
+        if (cachedRecovery) localStorage.setItem(recoveryKey(result.path), cachedRecovery);
+        localStorage.removeItem(recoveryKey(post.path));
+        const label = document.querySelector(".file-path");
+        if (label) label.textContent = result.path;
+        syncURL(true);
+      }
       if (revision === rev) {
         dirty = false;
-        localStorage.removeItem(recoveryKey(post.path));
+        localStorage.removeItem(recoveryKey(result.path));
         updateSave("Saved locally");
       } else {
         const cached = JSON.parse(
-          localStorage.getItem(recoveryKey(post.path)) || "{}",
+          localStorage.getItem(recoveryKey(result.path)) || "{}",
         );
         cached.version = result.version;
-        localStorage.setItem(recoveryKey(post.path), JSON.stringify(cached));
+        localStorage.setItem(recoveryKey(result.path), JSON.stringify(cached));
       }
     })
     .catch((e) => {
@@ -175,6 +229,7 @@ async function navigate(fn: () => Promise<void>) {
   }
 }
 function destroyEditor() {
+  rememberPosition();
   editor?.destroy();
   editor = null;
   clearInterval(previewTimer);
@@ -199,6 +254,7 @@ async function library() {
         "",
       )}</select></div></div><div class="list-heading"><span>TITLE</span><span>DATE / WORDS</span></div><div id="posts"></div><footer class="library-footer"><span><kbd>⌘</kbd> <kbd>N</kbd> new draft</span></footer></main>`,
   );
+  $(".wordmark").onclick = (event) => { event.preventDefault(); void navigate(library); };
   $("#new").onclick = () => newDraft();
   $("#git").onclick = () => navigate(git);
   $("#search").value = query;
@@ -219,8 +275,10 @@ async function library() {
       }),
   );
   renderList();
+  syncURL();
 }
 function renderList() {
+  try { sessionStorage.setItem("writer-library", JSON.stringify({ filter, query, category })); } catch {}
   document.querySelectorAll<HTMLElement>("[data-filter]").forEach((b) => {
     b.classList.toggle("selected", b.dataset.filter === filter);
     b.setAttribute("aria-pressed", String(b.dataset.filter === filter));
@@ -259,7 +317,7 @@ async function newDraft() {
     $("#title").select();
   });
 }
-async function openPost(rel: string) {
+async function openPost(rel: string, replaceURL = false) {
   const {
     EditorState,
     EditorView,
@@ -267,6 +325,8 @@ async function openPost(rel: string) {
     drawSelection,
     placeholder,
     defaultKeymap,
+    indentWithTab,
+    indentUnit,
     history,
     historyKeymap,
     markdown,
@@ -275,6 +335,8 @@ async function openPost(rel: string) {
     searchKeymap,
     highlightSelectionMatches,
     style,
+    spelling,
+    formatting,
   } = await import("./editor-support.ts");
   const p = await api(`post?path=${encodeURIComponent(rel)}`);
   destroyEditor();
@@ -297,7 +359,7 @@ async function openPost(rel: string) {
     } catch {}
   }
   shell(
-    `<header class="editor-head"><button id="back" title="Writing list (⌘⇧L)">← <span>Writing</span></button><span class="document-label">${esc(p.title)}</span><div class="head-actions"><span id="kind-label" class="document-status">${p.kind === "draft" ? "Draft" : "Post"}</span><button id="details-toggle" aria-expanded="false" aria-controls="details">Details</button><button id="preview-toggle" title="Preview (⌘⇧P)" aria-pressed="false">◧ <span>Preview</span></button><button id="git" title="Git">⑂ <span>Git</span></button></div></header><main class="writing-layout"><section class="writing-pane"><div id="editor"></div></section><aside id="details" hidden aria-label="Document details"><div class="inspector-head"><h2>Document details</h2><button id="close-details" aria-label="Close document details">×</button></div><div class="details-fields"><label class="full">Title<input id="title" value="${esc(metadata.title || "")}" autocomplete="off"></label><label>Date<input id="date" type="date" value="${esc(String(metadata.date || "").slice(0, 10))}"></label><label>Categories<input id="categories" value="${esc((Array.isArray(metadata.categories) ? metadata.categories : []).join(", "))}" placeholder="thoughts, programming"></label><label class="full">Description<textarea id="description" rows="2">${esc(metadata.description || "")}</textarea></label><label>Reading time (minutes)<input id="reading_time" type="number" min="1" value="${esc(metadata.reading_time || 1)}"></label><label>Feature image<input id="feature_image" value="${esc(metadata.feature_image || "")}" placeholder="/assets/img/…"></label><div class="full document-actions"><span class="file-path">${esc(p.path)}</span><button id="move">${p.kind === "draft" ? "Move to Posts" : "Move to Drafts"}</button></div></div></aside><section id="preview-pane" hidden aria-label="Jekyll preview"><div class="preview-bar"><span>JEKYLL PREVIEW</span><div><button id="refresh-preview">Refresh</button><button id="close-preview" aria-label="Close preview">×</button></div></div><p id="preview-message" class="subtle">Starting local Jekyll…</p><iframe id="preview-frame" title="Actual Jekyll page" sandbox="allow-scripts allow-same-origin" hidden></iframe></section></main><footer class="editor-footer"><button id="save-status" title="Save locally (⌘S)">Saved locally</button><span id="words"></span><span class="footer-hint"><kbd>⌘S</kbd> save <span>·</span> <kbd>⌘⇧P</kbd> preview</span></footer>`,
+    `<header class="editor-head"><button id="back" title="Writing list (⌘⇧L)">← <span>Writing</span></button><span class="document-label">${esc(p.title)}</span><div class="head-actions"><span id="kind-label" class="document-status">${p.kind === "draft" ? "Draft" : "Post"}</span><button id="details-toggle" aria-expanded="false" aria-controls="details">Details</button><button id="preview-toggle" title="Preview (⌘⇧P)" aria-pressed="false">◧ <span>Preview</span></button><button id="git" title="Git">⑂ <span>Git</span></button></div></header><main class="writing-layout"><section class="writing-pane"><div id="editor"></div></section><aside id="details" hidden aria-label="Document details"><div class="inspector-head"><h2>Document details</h2><button id="close-details" aria-label="Close document details">×</button></div><div class="details-fields"><label class="full">Title<input id="title" value="${esc(metadata.title || "")}" autocomplete="off"></label><label>Date<input id="date" type="date" value="${esc(String(metadata.date || "").slice(0, 10))}"></label><label>Categories<input id="categories" value="${esc((Array.isArray(metadata.categories) ? metadata.categories : []).join(", "))}" placeholder="thoughts, programming"></label><label class="full">Description<textarea id="description" rows="2">${esc(metadata.description || "")}</textarea></label><label>Reading time (minutes)<input id="reading_time" type="number" min="1" value="${esc(metadata.reading_time || 1)}"></label><label>Feature image<input id="feature_image" value="${esc(metadata.feature_image || "")}" placeholder="/assets/img/…"></label><div class="full document-actions"><span class="file-path">${esc(p.path)}</span><button id="rename">Update filename</button><button id="move">${p.kind === "draft" ? "Move to Posts" : "Move to Drafts"}</button></div></div></aside><section id="preview-pane" hidden aria-label="Jekyll preview"><div class="preview-bar"><span>JEKYLL PREVIEW</span><div><button id="refresh-preview">Refresh</button><button id="close-preview" aria-label="Close preview">×</button></div></div><p id="preview-message" class="subtle">Starting local Jekyll…</p><iframe id="preview-frame" title="Actual Jekyll page" sandbox="allow-scripts allow-same-origin" hidden></iframe></section></main><footer class="editor-footer"><button id="save-status" title="Save locally (⌘S)">Saved locally</button><span id="words"></span><span class="footer-hint"><kbd>⌘S</kbd> save <span>·</span> <kbd>⌘⇧P</kbd> preview</span></footer>`,
   );
   editor = new EditorView({
     parent: $("#editor"),
@@ -307,11 +369,15 @@ async function openPost(rel: string) {
         history(),
         drawSelection(),
         markdown(),
+        spelling,
+        formatting,
+        indentUnit.of("    "),
         syntaxHighlighting(style),
         EditorView.lineWrapping,
         highlightSelectionMatches(),
 
         keymap.of([
+          indentWithTab,
           ...defaultKeymap,
           ...historyKeymap,
           ...markdownKeymap,
@@ -319,7 +385,10 @@ async function openPost(rel: string) {
         ]),
         EditorView.contentAttributes.of({
           "aria-label": "Markdown body",
-          spellcheck: "true",
+          spellcheck: "false",
+          autocorrect: "off",
+          writingsuggestions: "false",
+          lang: "en",
         }),
         EditorView.updateListener.of((u) => {
           if (u.docChanged) markDirty();
@@ -375,6 +444,14 @@ async function openPost(rel: string) {
   $("#close-preview").onclick = togglePreview;
   $("#refresh-preview").onclick = () => refreshPreview(true);
   $("#move").onclick = movePost;
+  $("#rename").onclick = () => navigate(async () => {
+    if (!current || !editor) return;
+    const renamed = await api("post", { path: current.path, version: current.version,
+      body: editor.state.doc.toString(), meta: metadata, updateFilename: true }, "PUT");
+    await openPost(renamed.path, true);
+    setDetails(true);
+    syncURL(true);
+  });
   if (recovery) {
     markDirty();
     error(new Error("Recovered your unsaved local writing."));
@@ -397,7 +474,17 @@ async function openPost(rel: string) {
     $("#notice").append(b);
   }
   updateSave(recovery ? "Recovered · saving…" : "Saved locally");
+  try {
+    const position = JSON.parse(sessionStorage.getItem("writer-position:" + rel) || "null");
+    if (position && editor) {
+      const clamp = (n: unknown) => typeof n === "number" && Number.isFinite(n) ? Math.max(0, Math.min(editor!.state.doc.length, Math.floor(n))) : 0;
+      editor.dispatch({ selection: { anchor: clamp(position.anchor), head: clamp(position.head) } });
+      const view = editor;
+      requestAnimationFrame(() => { if (editor === view && Number.isFinite(position.scroll)) view.scrollDOM.scrollTop = position.scroll; });
+    }
+  } catch {}
   editor?.focus();
+  syncURL(replaceURL);
 }
 async function movePost() {
   await navigate(async () => {
@@ -477,6 +564,7 @@ function setDetails(open: boolean) {
   $("#details").hidden = !open;
   $("#details-toggle").setAttribute("aria-expanded", String(open));
   $(".writing-layout").classList.toggle("with-details", open);
+  syncURL(true);
 }
 async function togglePreview() {
   previewOpen = !previewOpen;
@@ -484,6 +572,7 @@ async function togglePreview() {
   $("#preview-pane").hidden = !previewOpen;
   $(".writing-layout").classList.toggle("with-preview", previewOpen);
   $("#preview-toggle").setAttribute("aria-pressed", String(previewOpen));
+  syncURL(true);
   if (!previewOpen) {
     clearInterval(previewTimer);
     editor?.focus();
@@ -578,6 +667,7 @@ async function git() {
         }
       }),
   );
+  syncURL();
 }
 function updateCommit() {
   $("#commit").disabled =
@@ -585,9 +675,20 @@ function updateCommit() {
 }
 async function gitAction(
   action: "commit" | "push",
-  data: { paths: string[]; message: string } | Record<string, never>,
+  data: { paths: string[]; message: string } | { confirmedRevision?: string },
 ) {
   if (busy) return;
+  if (action === "push") {
+    try {
+      const pending = await api("git");
+      if (pending.existingPostChanges.length) {
+        if (!window.confirm("This push changes or removes articles already on the remote branch:\n\n" +
+          pending.existingPostChanges.join("\n") +
+          "\n\nThese articles may be live. Renaming or changing their date can break existing links. Push anyway?")) return;
+        data = { confirmedRevision: pending.pushRevision };
+      }
+    } catch (e) { error(e); return; }
+  }
   busy = true;
   document
     .querySelectorAll<
@@ -635,6 +736,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 window.addEventListener("beforeunload", (e) => {
+  rememberPosition();
   if (dirty || savePromise || busy) {
     e.preventDefault();
     e.returnValue = "";
@@ -645,7 +747,15 @@ window.addEventListener("online", () => {
 });
 try {
   config = await api("config");
-  await library();
+  try {
+    const saved = JSON.parse(sessionStorage.getItem("writer-library") || "null");
+    if (saved) {
+      filter = ["all", "draft", "post"].includes(saved.filter) ? saved.filter : "all";
+      query = typeof saved.query === "string" ? saved.query : "";
+      category = typeof saved.category === "string" ? saved.category : "";
+    }
+  } catch {}
+  await restoreRoute(readRoute(location.search));
   setTimeout(() => import("./editor-support.ts").catch(() => {}), 150);
 } catch (e) {
   shell('<main class="library"><h1>Could not open your writing.</h1></main>');

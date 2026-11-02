@@ -19,6 +19,10 @@ Defaults to the parent repository directory, so the checkout can be moved withou
 
 - Search the list, filter Drafts / Posts, or filter by category. Opening a file hides the list.
 - Markdown syntax stays visible, with headings, bold, italics, and links styled.
+- URLs preserve the open document (`?file=…`), panel (`&panel=details` or `preview`), and Git screen (`?screen=git`). Refresh and browser Back/Forward restore these views. Cursor/scroll position and library filters stay in per-tab session storage.
+- Spelling is checked locally with nspell and a bundled English dictionary in a background worker. Click an underlined word for corrections, or use **Alt+Enter** at the word. **Escape** closes suggestions. Code, URLs, and email addresses are skipped. No text is sent to a spelling service.
+- **⌘B**, **⌘I**, and **⌘U** toggle bold, italic, and underline on selected text. With no selection, type inside the inserted formatting and press the shortcut again to continue outside it. Underline uses inline `<u>` HTML. Windows/Linux use Ctrl.
+- **Tab** indents the current line or selection by four spaces; **Shift+Tab** outdents. Use these to nest Markdown list items. Press **Escape**, then **Tab** to move keyboard focus out of the editor.
 - Edits autosave after 650 ms of idle time. **⌘S** saves immediately. The footer shows local save status.
 - **⌘N** creates a draft, **⌘⇧L** returns to the list, **⌘⇧P** toggles Jekyll preview. On other systems use Ctrl instead of Cmd. The editor also supports undo/redo, find, and standard text navigation.
 - Document details open from the toolbar into a separate inspector and are collapsed by default. Draft/Post status also lives in the toolbar. Title, date, categories, description, reading time, and feature image are stored in YAML front matter; other fields and YAML comments are preserved.
@@ -67,3 +71,5 @@ Newsreader is bundled locally (including italics) for offline writing. Pale warm
 ## Type safety
 
 Application code uses strict TypeScript. `npm run build` runs the type checker before bundling; `npm start` uses `tsx` without a separate server compilation step. Shared contracts in `contracts.ts` describe documents, metadata, saves, moves, and Git state. Zod validates API inputs/responses and parsed front matter at runtime, including unknown metadata preservation. Functional tests remain in JavaScript and run through `tsx` against the TypeScript implementation. Types complement the stale-save checks and end-to-end tests; they do not replace them.
+
+Draft filenames follow title changes on save. In Details, **Update filename** explicitly regenerates a post filename from its date and title. Name collisions are rejected without overwriting content. Push requires confirmation when outgoing commits modify or remove posts already in the last known upstream snapshot; these may be live, and filename/date changes may break links. This comparison does not verify deployment status or fetch the remote.

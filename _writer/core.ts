@@ -160,11 +160,14 @@ export class Blog {
       }),
     );
   }
-  async save({ path: rel, version, body, meta }: SaveInput) {
+  async save({ path: rel, version, body, meta, updateFilename }: SaveInput) {
     return this.serial(async () => {
       if (typeof body !== "string") throw new Error("Missing body");
       const file = await this.contentPath(rel);
-      const raw = await fs.readFile(file, "utf8");
+      const raw = await fs.readFile(file, "utf8").catch((e) => {
+        if (hasCode(e, "ENOENT")) throw Object.assign(new Error("This article was moved or removed. Reload before saving."), { status: 409 });
+        throw e;
+      });
       if (hash(raw) !== version)
         throw Object.assign(
           new Error(
@@ -172,7 +175,28 @@ export class Blog {
           ),
           { status: 409 },
         );
+      const current = await this.read(rel);
+      let target = rel;
+      if (updateFilename || (current.kind === "draft" && meta?.title !== undefined && meta.title !== current.meta.title)) {
+        const title = meta?.title ?? current.meta.title ?? "Untitled";
+        let prefix = "";
+        if (current.kind === "post") {
+          const date = String(meta?.date ?? current.meta.date ?? path.basename(rel).slice(0, 10)).slice(0, 10);
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !Number.isFinite(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date)
+            throw new Error("Choose a valid date before updating the filename.");
+          prefix = date + "-";
+        }
+        target = path.posix.dirname(rel) + "/" + prefix + slugify(title) + ".md";
+      }
       const next = merge(raw, body, meta);
+      if (target !== rel) {
+        const destination = await this.contentPath(target);
+        try { await fs.writeFile(destination, next, { flag: "wx" }); }
+        catch (e) { if (hasCode(e, "EEXIST")) throw new Error("An article already has that filename. Choose a different title."); throw e; }
+        try { await fs.unlink(file); }
+        catch (e) { await fs.unlink(destination); throw e; }
+        return this.read(target);
+      }
       const temp = file + ".writer-" + crypto.randomUUID();
       await fs.writeFile(temp, next);
       await fs.rename(temp, file);
@@ -292,7 +316,12 @@ export class Blog {
         const [id, message, when] = l.split("\t");
         return { id, message, when };
       });
-    return { branch, upstream, ahead, behind, files, log };
+    const pushRevision = (await this.git(["rev-parse", "HEAD"])).trim() + ":" +
+      (upstream ? (await this.git(["rev-parse", "@{upstream}"])).trim() : "");
+    const existingPostChanges = upstream ? (await this.git([
+      "diff", "--no-renames", "--name-only", "-z", "--diff-filter=MD", "@{upstream}", "HEAD", "--", this.posts + "/",
+    ])).split("\0").filter(Boolean) : [];
+    return { branch, upstream, ahead, behind, files, log, existingPostChanges, pushRevision };
   }
   async diff(rel: string) {
     const file = await this.safe(rel);

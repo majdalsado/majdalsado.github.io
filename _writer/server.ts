@@ -112,7 +112,7 @@ app.post("/api/commit", async (req, res) =>
     ),
   }),
 );
-app.post("/api/push", async (_, res) =>
+app.post("/api/push", async (req, res) =>
   res.json({
     output: await blog.serial(async () => {
       const s = await blog.status();
@@ -124,6 +124,9 @@ app.post("/api/push", async (_, res) =>
         throw new Error(
           "The branch is behind its last known upstream. Pull and resolve changes in your terminal first.",
         );
+      const approval = z.object({ confirmedRevision: z.string().optional() }).parse(req.body);
+      if (s.existingPostChanges.length && approval.confirmedRevision !== s.pushRevision)
+        throw new Error("This push changes existing remote articles. Review the warning and confirm again.");
       return (await blog.git(["push"])) || "Push completed.";
     }),
   }),

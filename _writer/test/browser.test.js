@@ -95,6 +95,49 @@ test(
     await p.locator("#categories").fill("writing, craft");
     await p.locator("#description").fill("A small test");
     await p.locator("#details-toggle").click();
+    const body = p.getByLabel("Markdown body");
+    await body.fill("A speling mistake. `speling` https://example.com/speling\n\n```js\nspeling\n```\n");
+    await expect(p.locator(".spelling-error")).toHaveCount(1);
+    await p.locator(".spelling-error").click();
+    await p.getByRole("button", { name: "spelling", exact: true }).click();
+    await expect(p.locator(".spelling-error")).toHaveCount(0);
+    await expect(p.locator("#save-status")).toHaveText("Saved locally");
+    assert.match((await blog.read((await blog.list())[0].path)).body, /^A spelling mistake/);
+    await body.press("ControlOrMeta+z");
+    await expect(p.locator(".spelling-error")).toHaveCount(1);
+    await p.locator(".spelling-error").click();
+    await body.press("Alt+Enter");
+    await expect(p.getByRole("group", { name: "Spelling suggestions for speling" })).toBeVisible();
+    await p.keyboard.press("Escape");
+    await expect(p.locator(".spelling-suggestions")).toHaveCount(0);
+    for (const [key, open, close] of [["b", "**", "**"], ["i", "*", "*"], ["u", "<u>", "</u>"]]) {
+      await body.fill("Selected words");
+      await body.press("ControlOrMeta+a");
+      await body.press(`ControlOrMeta+${key}`);
+      await expect(body).toHaveText(`${open}Selected words${close}`);
+      await body.press(`ControlOrMeta+${key}`);
+      await expect(body).toHaveText("Selected words");
+      await body.fill("");
+      await body.press(`ControlOrMeta+${key}`);
+      await body.pressSequentially("Typed");
+      await body.press(`ControlOrMeta+${key}`);
+      await body.pressSequentially(" plain");
+      await expect(body).toHaveText(`${open}Typed${close} plain`);
+      await expect(p.locator("#save-status")).toHaveText("Saved locally");
+      assert.equal((await blog.read((await blog.list())[0].path)).body, `${open}Typed${close} plain`);
+    }
+    for (const marker of ["-", "1."]) {
+      await body.fill(`${marker} Parent\n${marker} Child`);
+      await body.press("ControlOrMeta+End");
+      await body.press("Tab");
+      await expect(body).toBeFocused();
+      await expect(p.locator("#save-status")).toHaveText("Saved locally");
+      const listDraft = (await blog.list())[0];
+      assert.equal((await blog.read(listDraft.path)).body, `${marker} Parent\n    ${marker} Child`);
+      await body.press("Shift+Tab");
+      await expect(p.locator("#save-status")).toHaveText("Saved locally");
+      assert.equal((await blog.read(listDraft.path)).body, `${marker} Parent\n${marker} Child`);
+    }
     await p
       .getByLabel("Markdown body")
       .fill("# Hello\n\nA paragraph with **weight**.");
@@ -102,6 +145,22 @@ test(
     let draft = (await blog.list())[0];
     assert.equal(draft.title, "A quiet place");
     assert.match((await blog.read(draft.path)).body, /weight/);
+    assert.equal(new URL(p.url()).searchParams.get("file"), draft.path);
+    await p.locator("#details-toggle").click();
+    assert.equal(new URL(p.url()).searchParams.get("panel"), "details");
+    await p.reload();
+    await expect(p.locator("#details")).toBeVisible();
+    await expect(p.getByLabel("Markdown body")).toContainText("weight");
+    await p.locator("#details-toggle").click();
+    await p.locator("#back").click();
+    await expect(p).toHaveURL("http://localhost:4417/");
+    await p.goBack();
+    await expect(p.getByLabel("Markdown body")).toContainText("weight");
+    await p.goForward();
+    await expect(p.getByLabel("Search writing")).toBeVisible();
+    await p.goBack();
+    await expect(p.getByLabel("Markdown body")).toContainText("weight");
+
     await p.getByLabel("Markdown body").press("ControlOrMeta+End");
     await p.getByLabel("Markdown body").press("Enter");
     await p.getByLabel("Markdown body").pressSequentially("Explicit save.");
@@ -150,11 +209,18 @@ test(
     await p.locator("#date").fill("2026-10-25");
     await p.locator("#move").click();
     await expect(p.locator("#kind-label")).toHaveText("Post");
+    await p.locator("#details-toggle").click();
+    await p.locator("#title").fill("A quiet place revised");
+    await p.locator("#date").fill("2026-10-26");
+    await expect(p.locator("#save-status")).toHaveText("Saved locally");
+    assert.equal((await blog.list())[0].path, "all_collections/_posts/2026-10-25-a-quiet-place.md");
+    await p.locator("#rename").click();
+    await expect(p.locator(".file-path")).toContainText("2026-10-26-a-quiet-place-revised.md");
     const post = (await blog.list())[0];
     assert.equal(post.kind, "post");
     assert.equal(
       post.path,
-      "all_collections/_posts/2026-10-25-a-quiet-place.md",
+      "all_collections/_posts/2026-10-26-a-quiet-place-revised.md",
     );
     await p.locator("#back").click();
     await p.getByLabel("Search writing").fill("quiet");
@@ -162,6 +228,11 @@ test(
     await fs.writeFile(path.join(root, "unrelated.txt"), "Leave me staged");
     await blog.git(["add", "unrelated.txt"]);
     await p.locator("#git").click();
+    await expect(p.locator("#commit-message")).toBeVisible();
+    assert.equal(new URL(p.url()).searchParams.get("screen"), "git");
+    await p.reload();
+    await expect(p.locator("#commit-message")).toBeVisible();
+
     await p
       .getByRole("checkbox", { name: "Include " + post.path, exact: true })
       .check();
@@ -183,6 +254,25 @@ test(
     await p.locator("#push").click();
     await expect(p.locator("#git-output")).toContainText("Push completed.");
     assert.equal((await blog.status()).ahead, 0);
+    const live = await blog.read(post.path);
+    await blog.save({ ...live, body: live.body + "\nChanged remotely published article." });
+    await blog.commit([post.path], "Update existing article");
+    const denied = await fetch("http://localhost:4417/api/push", {
+      method: "POST", headers: { "Content-Type": "application/json", "X-Writer-Token": config.token }, body: "{}",
+    });
+    assert.equal(denied.ok, false);
+    assert.match((await denied.json()).error, /existing remote articles/);
+    await p.locator("#refresh").click();
+    await expect(p.locator("#push")).toBeEnabled();
+    const warning = p.waitForEvent("dialog");
+    const pushClick = p.locator("#push").click();
+    const dialog = await warning;
+    assert.match(dialog.message(), /may be live/);
+    assert.ok(dialog.message().includes(post.path));
+    await dialog.dismiss();
+    await pushClick;
+    assert.equal((await blog.status()).ahead, 1);
+
     for (const width of [320, 375, 414, 768]) {
       await p.setViewportSize({ width, height: 900 });
       assert.equal(

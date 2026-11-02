@@ -18,7 +18,10 @@
     "@codemirror/view": "^6.0.0",
     "@fontsource-variable/newsreader": "^5.3.0",
     "@lezer/highlight": "^1.0.0",
+    "@lezer/markdown": "^1.8.1",
+    "dictionary-en": "^4.0.0",
     "express": "^5.0.0",
+    "nspell": "^2.1.5",
     "tsx": "^4.23.15",
     "vite": "^7.0.0",
     "yaml": "^2.0.0",
@@ -28,6 +31,7 @@
     "@playwright/test": "^1.0.0",
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
+    "@types/nspell": "^2.1.6",
     "prettier": "^3.9.10",
     "typescript": "^7.0.2"
   }

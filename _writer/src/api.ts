@@ -36,7 +36,7 @@ type Requests = {
   move: MoveInput;
   image: { path: string; name: string; data: string };
   commit: { paths: string[]; message: string };
-  push: Record<string, never>;
+  push: { confirmedRevision?: string };
   "preview/start": Record<string, never>;
 };
 type Input<R extends Route> =
