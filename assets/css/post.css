@@ -255,3 +255,12 @@
   font-size: var(--text-sm);
   line-height: 1.5;
 }
+
+/* Disqus samples these colors and only understands legacy RGB notation. */
+#disqus_thread {
+  color: #22272e;
+  background-color: #f7fafe;
+}
+#disqus_thread a {
+  color: #1157a4;
+}
