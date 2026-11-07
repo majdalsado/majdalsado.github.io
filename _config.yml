@@ -23,4 +23,12 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["sitemap.xml", "feed.xml", "README.md", "_writer"]
+exclude:
+  - sitemap.xml
+  - feed.xml
+  - README.md
+  - _writer
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - node_modules

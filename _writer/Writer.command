@@ -1,15 +1,16 @@
 #!/bin/zsh
 cd "${0:A:h}"
-if curl -fsS http://localhost:4317/api/config >/dev/null 2>&1; then
-  open 'http://localhost:4317'
+url="http://localhost:${PORT:-4317}"
+if curl -fsS "$url/api/config" >/dev/null 2>&1; then
+  open "$url"
   exit 0
 fi
-npm start &
+pnpm start &
 writer_pid=$!
 trap 'kill $writer_pid 2>/dev/null' EXIT INT TERM
 for attempt in {1..100}; do
-  if curl -fsS http://localhost:4317/api/config >/dev/null 2>&1; then
-    open 'http://localhost:4317'
+  if curl -fsS "$url/api/config" >/dev/null 2>&1; then
+    open "$url"
     break
   fi
   sleep 0.1

@@ -1,0 +1,5 @@
+packages:
+  - _writer
+
+onlyBuiltDependencies:
+  - esbuild

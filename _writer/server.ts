@@ -241,7 +241,11 @@ if (process.env.NODE_ENV === "production")
 else {
   const vite = await createViteServer({
     root: here,
-    server: { middlewareMode: true, hmr: { server } },
+    server: {
+      middlewareMode: true,
+      hmr: { server },
+      fs: { allow: [here, path.resolve(here, "../node_modules")] },
+    },
     appType: "spa",
   });
   app.use(vite.middlewares);

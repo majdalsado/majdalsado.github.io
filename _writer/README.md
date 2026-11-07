@@ -5,15 +5,16 @@ A localhost writing IDE for Majd's Jekyll blog. The app lives in the blog reposi
 ## Run
 
 ```sh
-cd /Users/majd/dev/majdalsado.github.io/_writer
-npm start
+cd /Users/majd/dev/majdalsado.github.io
+pnpm install
+pnpm dev
 ```
 
-Open http://localhost:4317. You can also double-click `Writer.command` in Finder. Stop with Control-C in its terminal.
+The root command opens http://localhost:4317. You can also double-click `Writer.command` in Finder. Stop with Control-C in its terminal.
 
-Requires Node 20.19+ (or 22.12+), Ruby/Bundler, and the blog's installed gems. Run `npm install` here and `bundle install` in the blog if setting up another machine.
+Requires Node 20.19+ (or 22.12+), Ruby/Bundler, and the blog's installed gems. Run `pnpm install` from the blog root and `bundle install` in the blog if setting up another machine.
 
-Defaults to the parent repository directory, so the checkout can be moved without changing code. Override with `BLOG_ROOT=/absolute/path npm start`. `PORT` defaults to 4317 and `PREVIEW_PORT` to 4318. Both servers bind to loopback only.
+Defaults to the parent repository directory, so the checkout can be moved without changing code. Override with `BLOG_ROOT=/absolute/path pnpm start`. `PORT` defaults to 4317 and `PREVIEW_PORT` to 4318. Both servers bind to loopback only.
 
 ## Writing
 
@@ -49,16 +50,18 @@ The UI uses the America/Edmonton date when suggesting a new post date. It does n
 
 ## Development and verification
 
+Run these commands from `_writer/`.
+
 ```sh
-npm run dev
-npm run typecheck
-npm run build
-npm test
+pnpm dev
+pnpm typecheck
+pnpm build
+pnpm test
 ```
 
-Browser tests require `npx playwright install chromium`. Tests use disposable Git repos and a local bare remote; they do not commit or push the real blog. Browser/Jekyll integration tests reuse the installed gems and Gemfile from the parent blog repository.
+Browser tests require `pnpm exec playwright install chromium`. Tests use disposable Git repos and a local bare remote; they do not commit or push the real blog. Browser/Jekyll integration tests reuse the installed gems and Gemfile from the parent blog repository.
 
-For a built frontend: `npm run build && NODE_ENV=production npm start`.
+For a built frontend: `pnpm build && NODE_ENV=production pnpm start`.
 
 ## Interaction guidance
 
@@ -70,7 +73,7 @@ Newsreader is bundled locally (including italics) for offline writing. Pale warm
 
 ## Type safety
 
-Application code uses strict TypeScript. `npm run build` runs the type checker before bundling; `npm start` uses `tsx` without a separate server compilation step. Shared contracts in `contracts.ts` describe documents, metadata, saves, moves, and Git state. Zod validates API inputs/responses and parsed front matter at runtime, including unknown metadata preservation. Functional tests remain in JavaScript and run through `tsx` against the TypeScript implementation. Types complement the stale-save checks and end-to-end tests; they do not replace them.
+Application code uses strict TypeScript. `pnpm build` runs the type checker before bundling; `pnpm start` uses `tsx` without a separate server compilation step. Shared contracts in `contracts.ts` describe documents, metadata, saves, moves, and Git state. Zod validates API inputs/responses and parsed front matter at runtime, including unknown metadata preservation. Functional tests remain in JavaScript and run through `tsx` against the TypeScript implementation. Types complement the stale-save checks and end-to-end tests; they do not replace them.
 
 Draft filenames follow title changes on save. In Details, **Update filename** explicitly regenerates a post filename from its date and title. Name collisions are rejected without overwriting content. Push requires confirmation when outgoing commits modify or remove posts already in the last known upstream snapshot; these may be live, and filename/date changes may break links. This comparison does not verify deployment status or fetch the remote.
 

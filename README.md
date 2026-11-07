@@ -12,9 +12,8 @@ bundle exec jekyll serve
 The local writing IDE lives in [`_writer/`](_writer/README.md). It is excluded from the public Jekyll build.
 
 ```bash
-cd _writer
-npm install
-npm start
+pnpm install
+pnpm dev
 ```
 
-Open http://localhost:4317, or double-click `_writer/Writer.command`.
+Run these commands from the blog root. `pnpm dev` opens http://localhost:4317 in your browser. On macOS, you can also double-click `_writer/Writer.command`.

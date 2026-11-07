@@ -1,0 +1,8 @@
+{
+  "name": "majdalsado-blog",
+  "private": true,
+  "packageManager": "pnpm@10.7.1",
+  "scripts": {
+    "dev": "zsh _writer/Writer.command"
+  }
+}
