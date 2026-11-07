@@ -6,9 +6,12 @@
   {% if page.layout == "post" and content contains 'fetchpriority="high"' %}
     {% assign lead_img = content | split: '<img ' | slice: 1 | first | split: '>' | first %}
     {% if lead_img contains 'fetchpriority="high"' %}
-      {% if lead_img contains 'src="https://images.immediate.co.uk/' %}<link rel="preconnect" href="https://images.immediate.co.uk" />{% endif %}
       {% assign lead_src = lead_img | split: 'src="' | last | split: '"' | first %}
-      <link rel="preload" as="image"{% if site.data.mobile_covers[lead_src] %} media="(min-width: 701px)" type="image/avif"{% endif %} fetchpriority="high" href="{{ lead_img | split: 'src="' | last | split: '"' | first }}"{% if lead_img contains 'srcset="' %} imagesrcset="{{ lead_img | split: 'srcset="' | last | split: '"' | first }}" imagesizes="{{ lead_img | split: 'sizes="' | last | split: '"' | first }}"{% endif %} />
+      {% assign preload = lead_img %}
+      {% if site.data.mobile_covers[lead_src] %}
+        {% assign preload = content | split: '<img ' | first | split: '<source ' | last | split: '>' | first %}
+      {% endif %}
+      <link rel="preload" as="image" href="{{ lead_src }}" fetchpriority="high"{% if site.data.mobile_covers[lead_src] %} media="(min-width: 701px)" type="image/avif"{% endif %}{% if preload contains 'srcset="' %} imagesrcset="{{ preload | split: 'srcset="' | last | split: '"' | first }}" imagesizes="{{ preload | split: 'sizes="' | last | split: '"' | first }}"{% endif %} />
     {% endif %}
   {% else %}
     <link rel="preload" href="/assets/fonts/newsreader-text-normal.woff2" as="font" type="font/woff2" crossorigin />

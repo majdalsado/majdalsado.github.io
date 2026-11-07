@@ -8,7 +8,9 @@ feature_image: "https://images.immediate.co.uk/production/volatile/sites/7/2020/
 feature_image_position: "center -193px"
 reading_time: 4
 ---
-![Luddites destroy industrial machines, 1812](https://images.immediate.co.uk/production/volatile/sites/7/2020/02/19-GettyImages-1185854652-cdd0aab.jpg?webp=true){: width="1024" height="879" decoding="auto" fetchpriority="high" srcset="https://images.immediate.co.uk/production/volatile/sites/7/2020/02/19-GettyImages-1185854652-cdd0aab.jpg?quality=60&webp=true&w=480 480w, https://images.immediate.co.uk/production/volatile/sites/7/2020/02/19-GettyImages-1185854652-cdd0aab.jpg?quality=60&webp=true&w=650 650w, https://images.immediate.co.uk/production/volatile/sites/7/2020/02/19-GettyImages-1185854652-cdd0aab.jpg?quality=60&webp=true&w=1024 1024w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
+![Luddites destroy industrial machines, 1812](/assets/img/article_imgs/luddites-1812.webp){: width="1024" height="879" decoding="auto" fetchpriority="high" srcset="/assets/img/article_imgs/reading/luddites-1812-480.avif 480w, /assets/img/article_imgs/reading/luddites-1812-720.avif 720w, /assets/img/article_imgs/reading/luddites-1812-1024.avif 1024w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
+
+[Image source](https://images.immediate.co.uk/production/volatile/sites/7/2020/02/19-GettyImages-1185854652-cdd0aab.jpg?webp=true)
 > Luddites destroy industrial machines, 1812
 
 # 💡 intro to the problem 
