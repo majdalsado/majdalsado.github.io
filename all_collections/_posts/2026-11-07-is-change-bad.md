@@ -7,6 +7,8 @@ description: "why do we feel the way we do about it"
 reading_time: 4
 date: 2026-11-07
 ---
+_no ai was used in writing this content._
+
 # people don't like change
 
 As humans, we like to do the same things, in the same way, on all levels.
