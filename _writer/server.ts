@@ -52,6 +52,12 @@ app.use(express.json({ limit: "20mb" }));
 app.get("/api/config", (_, res) =>
   res.json({ token, root: blog.root, previewPort }),
 );
+app.get("/api/asset", async (req, res) => {
+  const rel = z.string().parse(req.query.path);
+  if (!rel.startsWith("assets/img/") || !/\.(webp|png|jpe?g|gif|avif)$/i.test(rel))
+    return res.status(400).json({ error: "Invalid image path" });
+  res.sendFile(await blog.safe(rel));
+});
 app.get("/api/posts", async (_, res) => res.json(await blog.list()));
 app.get("/api/post", async (req, res) =>
   res.json(await blog.read(z.string().parse(req.query.path))),

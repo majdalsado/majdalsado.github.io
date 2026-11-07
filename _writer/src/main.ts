@@ -90,7 +90,7 @@ function rememberPosition() {
   if (!editor || !current) return;
   try { sessionStorage.setItem("writer-position:" + current.path, JSON.stringify({
     anchor: editor.state.selection.main.anchor, head: editor.state.selection.main.head,
-    scroll: editor.scrollDOM.scrollTop,
+    scroll: previewOpen ? $(".writing-pane").scrollTop : window.scrollY,
   })); } catch {}
 }
 async function restoreRoute(route: Route) {
@@ -144,6 +144,7 @@ function today() {
 }
 function shell(content: string) {
   app.innerHTML = `<div id="notice" hidden></div>${content}`;
+  window.scrollTo(0, 0);
 }
 function recoveryKey(p: string) {
   return "writer:" + config.root + ":" + p;
@@ -337,6 +338,7 @@ async function openPost(rel: string, replaceURL = false) {
     style,
     spelling,
     formatting,
+    figures,
   } = await import("./editor-support.ts");
   const p = await api(`post?path=${encodeURIComponent(rel)}`);
   destroyEditor();
@@ -359,7 +361,7 @@ async function openPost(rel: string, replaceURL = false) {
     } catch {}
   }
   shell(
-    `<header class="editor-head"><button id="back" title="Writing list (⌘⇧L)">← <span>Writing</span></button><span class="document-label">${esc(p.title)}</span><div class="head-actions"><span id="kind-label" class="document-status">${p.kind === "draft" ? "Draft" : "Post"}</span><button id="details-toggle" aria-expanded="false" aria-controls="details">Details</button><button id="preview-toggle" title="Preview (⌘⇧P)" aria-pressed="false">◧ <span>Preview</span></button><button id="git" title="Git">⑂ <span>Git</span></button></div></header><main class="writing-layout"><section class="writing-pane"><div id="editor"></div></section><aside id="details" hidden aria-label="Document details"><div class="inspector-head"><h2>Document details</h2><button id="close-details" aria-label="Close document details">×</button></div><div class="details-fields"><label class="full">Title<input id="title" value="${esc(metadata.title || "")}" autocomplete="off"></label><label>Date<input id="date" type="date" value="${esc(String(metadata.date || "").slice(0, 10))}"></label><label>Categories<input id="categories" value="${esc((Array.isArray(metadata.categories) ? metadata.categories : []).join(", "))}" placeholder="thoughts, programming"></label><label class="full">Description<textarea id="description" rows="2">${esc(metadata.description || "")}</textarea></label><label>Reading time (minutes)<input id="reading_time" type="number" min="1" value="${esc(metadata.reading_time || 1)}"></label><label>Feature image<input id="feature_image" value="${esc(metadata.feature_image || "")}" placeholder="/assets/img/…"></label><div class="full document-actions"><span class="file-path">${esc(p.path)}</span><button id="rename">Update filename</button><button id="move">${p.kind === "draft" ? "Move to Posts" : "Move to Drafts"}</button></div></div></aside><section id="preview-pane" hidden aria-label="Jekyll preview"><div class="preview-bar"><span>JEKYLL PREVIEW</span><div><button id="refresh-preview">Refresh</button><button id="close-preview" aria-label="Close preview">×</button></div></div><p id="preview-message" class="subtle">Starting local Jekyll…</p><iframe id="preview-frame" title="Actual Jekyll page" sandbox="allow-scripts allow-same-origin" hidden></iframe></section></main><footer class="editor-footer"><button id="save-status" title="Save locally (⌘S)">Saved locally</button><span id="words"></span><span class="footer-hint"><kbd>⌘S</kbd> save <span>·</span> <kbd>⌘⇧P</kbd> preview</span></footer>`,
+    `<header class="editor-head"><button id="back" title="Writing list (⌘⇧L)">← <span>Writing</span></button><span class="document-label">${esc(p.title)}</span><div class="head-actions"><span id="kind-label" class="document-status">${p.kind === "draft" ? "Draft" : "Post"}</span><button id="details-toggle" aria-expanded="false" aria-controls="details">Details</button><button id="preview-toggle" title="Preview (⌘⇧P)" aria-pressed="false">◧ <span>Preview</span></button><button id="git" title="Git">⑂ <span>Git</span></button></div></header><main class="writing-layout"><section class="writing-pane"><div id="editor"></div></section><aside id="details" hidden aria-label="Document details"><div class="inspector-head"><h2>Document details</h2><button id="close-details" aria-label="Close document details">×</button></div><div class="details-fields"><label class="full">Title<input id="title" value="${esc(metadata.title || "")}" autocomplete="off"></label><label>Date<input id="date" type="date" value="${esc(String(metadata.date || "").slice(0, 10))}"></label><label>Categories<input id="categories" value="${esc((Array.isArray(metadata.categories) ? metadata.categories : []).join(", "))}" placeholder="thoughts, programming"></label><label class="full">Description<textarea id="description" rows="2">${esc(metadata.description || "")}</textarea></label><label>Reading time (minutes)<input id="reading_time" type="number" min="1" value="${esc(metadata.reading_time || 1)}"></label><label>Feature image<input id="feature_image" value="${esc(metadata.feature_image || "")}" placeholder="/assets/img/…"></label><div class="full document-actions"><span id="words"></span><button id="save-status" title="Save locally (⌘S)">Saved locally</button><span class="file-path">${esc(p.path)}</span><button id="rename">Update filename</button><button id="move">${p.kind === "draft" ? "Move to Posts" : "Move to Drafts"}</button></div></div></aside><section id="preview-pane" hidden aria-label="Jekyll preview"><div class="preview-bar"><span>JEKYLL PREVIEW</span><div><button id="refresh-preview">Refresh</button><button id="close-preview" aria-label="Close preview">×</button></div></div><p id="preview-message" class="subtle">Starting local Jekyll…</p><iframe id="preview-frame" title="Actual Jekyll page" sandbox="allow-scripts allow-same-origin" hidden></iframe></section></main>`,
   );
   editor = new EditorView({
     parent: $("#editor"),
@@ -371,6 +373,7 @@ async function openPost(rel: string, replaceURL = false) {
         markdown(),
         spelling,
         formatting,
+        figures,
         indentUnit.of("    "),
         syntaxHighlighting(style),
         EditorView.lineWrapping,
@@ -480,7 +483,10 @@ async function openPost(rel: string, replaceURL = false) {
       const clamp = (n: unknown) => typeof n === "number" && Number.isFinite(n) ? Math.max(0, Math.min(editor!.state.doc.length, Math.floor(n))) : 0;
       editor.dispatch({ selection: { anchor: clamp(position.anchor), head: clamp(position.head) } });
       const view = editor;
-      requestAnimationFrame(() => { if (editor === view && Number.isFinite(position.scroll)) view.scrollDOM.scrollTop = position.scroll; });
+      requestAnimationFrame(() => { if (editor === view && Number.isFinite(position.scroll)) {
+        if (previewOpen) $(".writing-pane").scrollTop = position.scroll;
+        else window.scrollTo(0, position.scroll);
+      } });
     }
   } catch {}
   editor?.focus();

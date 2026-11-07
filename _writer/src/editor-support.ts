@@ -51,3 +51,4 @@ export {
 
 export { spelling } from "./spelling.ts";
 export { formatting } from "./formatting.ts";
+export { figures } from "./figures.ts";

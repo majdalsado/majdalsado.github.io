@@ -96,6 +96,23 @@ test(
     await p.locator("#description").fill("A small test");
     await p.locator("#details-toggle").click();
     const body = p.getByLabel("Markdown body");
+    await fs.mkdir(path.join(root, "assets/img"), { recursive: true });
+    await fs.writeFile(path.join(root, "assets/img/figure.png"), Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a1X8AAAAASUVORK5CYII=", "base64"));
+    const figureSource = '<figure class="article-figure">\n<img src="/assets/img/figure.png" alt="Test image">\n<figcaption>A useful caption</figcaption>\n</figure>';
+    await body.fill("Before\n\n" + figureSource + "\n\nAfter");
+    await body.press("ControlOrMeta+Home");
+    await expect(p.locator(".writer-figure img")).toBeVisible();
+    await expect.poll(() => p.locator(".writer-figure img").evaluate(img => img.naturalWidth)).toBe(1);
+    await expect(p.locator(".writer-figure figcaption")).toHaveText("A useful caption");
+    await p.getByRole("button", { name: "Edit figure", exact: true }).click();
+    await expect(p.locator(".writer-figure")).toHaveCount(0);
+    await expect(body).toContainText('<figure class="article-figure">');
+    await body.press("ControlOrMeta+End");
+    await expect(p.locator(".writer-figure")).toHaveCount(1);
+    await expect(p.locator("#save-status")).toHaveText("Saved locally");
+    assert.ok((await blog.read((await blog.list())[0].path)).body.includes(figureSource));
+    await fs.unlink(path.join(root, "assets/img/figure.png"));
+
     await body.fill("A speling mistake. `speling` https://example.com/speling\n\n```js\nspeling\n```\n");
     await expect(p.locator(".spelling-error")).toHaveCount(1);
     await p.locator(".spelling-error").click();

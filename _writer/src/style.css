@@ -274,6 +274,9 @@ kbd {
   color: var(--muted);
 }
 .editor-head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   background: var(--desk);
   height: 66px;
   display: flex;
@@ -296,7 +299,7 @@ kbd {
 .writing-layout {
   background: var(--desk);
   display: flex;
-  height: calc(100dvh - 108px);
+  height: calc(100dvh - 66px);
   overflow: hidden;
 }
 .writing-pane {
@@ -428,31 +431,6 @@ summary span {
 .cm-panels {
   background: var(--surface) !important;
   border: 1px solid var(--line) !important;
-}
-.editor-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 42px;
-  background: var(--desk);
-  border-top: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 0 30px;
-  color: var(--muted);
-  font: 10px var(--sans);
-}
-.editor-footer button {
-  font: inherit;
-  padding: 5px 0;
-}
-.footer-hint {
-  margin-left: auto;
-}
-.footer-hint span {
-  margin: 0 8px;
 }
 #preview-pane {
   flex: 1;
@@ -682,12 +660,6 @@ summary span {
   .document-label {
     display: none;
   }
-  .editor-footer {
-    padding: 0 18px;
-  }
-  .footer-hint {
-    display: none;
-  }
   .sync-state {
     flex-direction: column;
     gap: 8px;
@@ -897,6 +869,24 @@ summary span {
   }
 }
 
+/* The manuscript grows with the page; only split preview needs its own scroll panes. */
+.writing-layout:not(.with-preview) {
+  height: auto;
+  min-height: calc(100dvh - 66px);
+  overflow: visible;
+  padding-bottom: 0;
+}
+.writing-layout:not(.with-preview) .writing-pane { overflow: visible; }
+html:has(.editor-head) { scroll-padding-top: 66px; }
+@media (min-width: 601px) {
+  .writing-layout.with-details #details {
+    position: sticky;
+    top: 82px;
+    align-self: flex-start;
+    max-height: calc(100dvh - 98px);
+  }
+}
+
 .spelling-error {
   text-decoration: underline wavy #b45445;
   text-decoration-thickness: 1px;
@@ -912,3 +902,8 @@ summary span {
 .spelling-suggestions { padding: 5px; font: 14px system-ui, sans-serif; color: #293c54; }
 .spelling-suggestions button { display: block; width: 100%; text-align: left; padding: 7px 12px; border: 0; background: transparent; color: inherit; }
 .spelling-suggestions button:hover, .spelling-suggestions button:focus-visible { background: #eee6d4; outline: 1px solid #d8cfbb; }
+
+.writer-figure { margin: 1.5em 0; white-space: normal; }
+.writer-figure img { display: block; max-width: 100%; max-height: 65vh; height: auto; margin: 0 auto; border-radius: 4px; }
+.writer-figure figcaption { margin-top: .65em; color: var(--muted); font: 14px/1.5 system-ui, sans-serif; }
+.writer-figure .figure-edit { margin-top: .5em; font: 12px system-ui, sans-serif; color: var(--muted); }
