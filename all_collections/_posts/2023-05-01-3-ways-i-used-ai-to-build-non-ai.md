@@ -8,7 +8,7 @@ feature_image: "/assets/img/article_imgs/openai_colivevalues.png"
 feature_image_position: "95px -373px"
 reading_time: 4
 ---
-![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png){: width="500" height="500" decoding="async" fetchpriority="high"}
+![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png){: width="500" height="500" decoding="auto" fetchpriority="high"}
 
 A couple months ago, the wave of AI/LLM breakthroughs took the world by storm and I found myself contemplating how to leverage these advances to my advantage.
 
@@ -20,7 +20,7 @@ But I didn't want to build something just for the sake of technology. I wanted t
 
 Enter colive values, an idea I had for a platform for remote workers to discover like-minded communities to temporarily work and stay in, that align with their values or interests. This was an idea I've contemplated for a while, but never had the time/resources to seriously look into.
 
-#### Today I'd like to share 3 ways I used AI to help me overcome challenges and build colive values.
+**Today I'd like to share 3 ways I used AI to help me overcome challenges and build colive values.**
 
 # 🧙‍♂️ #1 - Github Copilot, the Autocomplete wizard
 First up is Github Copilot, a GPT-powered tool that integrates into your code editor and offers autocomplete as you type. 

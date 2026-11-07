@@ -1,0 +1,19 @@
+{%- comment -%}
+Keep normal Markdown images and their full-size src for the lightbox.
+Add AVIF sources at build time; the original img is the format fallback.
+Small mobile covers are embedded so a first visit doesn't need a second request.
+{%- endcomment -%}
+{%- assign fragments = content | split: '<img ' -%}
+{{ fragments.first }}{%- for fragment in fragments offset:1 -%}
+  {%- assign tag = fragment | split: '>' | first -%}
+  {%- if tag contains '.avif ' and tag contains 'srcset="' -%}
+    {%- assign src = tag | split: 'src="' | last | split: '"' | first -%}
+    {%- assign variants = tag | split: 'srcset="' | last | split: '"' | first -%}
+    {%- assign sizes = tag | split: 'sizes="' | last | split: '"' | first -%}
+    {%- capture srcset_attr %} srcset="{{ variants }}"{% endcapture -%}
+    {%- capture sizes_attr %} sizes="{{ sizes }}"{% endcapture -%}
+    <picture>{% if site.data.mobile_covers[src] and tag contains 'fetchpriority="high"' %}<source media="(max-width: 700px)" type="image/avif" srcset="{{ site.data.mobile_covers[src] }}">{% endif %}<source type="image/avif" srcset="{{ variants }}" sizes="{{ sizes }}"><img {{ tag | remove: srcset_attr | remove: sizes_attr }}></picture>{{ fragment | remove_first: tag | remove_first: '>' }}
+  {%- else -%}
+    <img {{ fragment }}
+  {%- endif -%}
+{%- endfor -%}

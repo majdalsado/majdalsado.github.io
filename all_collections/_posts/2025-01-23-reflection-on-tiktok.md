@@ -31,7 +31,7 @@ TikTok was the first algorithm that truly tailored to the user, not giving them 
 - The success of tiktok tripped an arms race of all social media apps to follow its footsteps and abandon the social aspect of social media.
  -->
 
-![TikTok is getting banned](/assets/img/article_imgs/tiktok/tiktok-search.webp){: width="1000" height="700" decoding="async" loading="lazy"}
+![TikTok is getting banned](/assets/img/article_imgs/tiktok/tiktok-search.webp){: width="1000" height="700" decoding="auto" fetchpriority="high" srcset="/assets/img/article_imgs/tiktok/reading/tiktok-search-480.avif 480w, /assets/img/article_imgs/tiktok/reading/tiktok-search-720.avif 720w, /assets/img/article_imgs/tiktok/reading/tiktok-search-1000.avif 1000w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
 
 With talks of TikTok having to shut down in the US, I wanted to take a moment to reflect on the impact the app had on social media, and online media in general.
 

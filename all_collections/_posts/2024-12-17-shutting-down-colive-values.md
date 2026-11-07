@@ -8,7 +8,7 @@ feature_image_position: "0"
 reading_time: 5
 ---
 
-![colive values banner](/assets/img/article_imgs/shutting-down-colive/cover.webp){: width="1000" height="571" decoding="async" fetchpriority="high"}
+![colive values banner](/assets/img/article_imgs/shutting-down-colive/cover.webp){: width="1000" height="571" decoding="auto" fetchpriority="high" srcset="/assets/img/article_imgs/shutting-down-colive/reading/cover-480.avif 480w, /assets/img/article_imgs/shutting-down-colive/reading/cover-720.avif 720w, /assets/img/article_imgs/shutting-down-colive/reading/cover-1000.avif 1000w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
 
 **After 12 months of work and 19,314 lines of code, I’m shutting down colive values**. 
 
@@ -33,7 +33,7 @@ Some of the fragmented mess of finding a coliving. The sources varied across Goo
 
 # What Worked Well
 
-### Finding an Edge in a Crowded Market
+## Finding an Edge in a Crowded Market
 
 Building a marketplace is notoriously difficult - you need both supply (coliving hosts) and demand (remote workers) to create value. I knew I needed a creative approach to crack this chicken-and-egg problem. Especially as a team of one.
 
@@ -47,18 +47,18 @@ This worked well (besides the lawsuit scare 😅) at getting things started. Alt
 Community classification in action:
 ![Community classification in action](/assets/img/article_imgs/gpt4-in-action.webp){: width="1000" height="789" decoding="async" loading="lazy"}
 
-### Engaging with Users
+## Engaging with Users
 
 You’ve heard the advice to talk to users often and early, and I won’t go into the obvious details on the importance of user testing, the MOM test, and all that other good stuff. I do have two main points related to this:
 
-#### 1. Get an MVP out FAST
+### 1. Get an MVP out FAST
 
 Getting something out quickly was crucial. Instead of perfecting features, I focused on launching a basic platform that demonstrated the core value proposition. This allowed me to start gathering feedback immediately and allowed me to gain momentum to keep building. It wouldn’t have been possible to continue building on the platform without this early feedback.
 
 colive values MVP:
 ![colive values live](/assets/img/article_imgs/shutting-down-colive/colive-values-view.webp){: width="1000" height="920" decoding="async" loading="lazy"}
 
-#### 2. Use social channels
+### 2. Use social channels
 
 Our best insights came from engaging directly with our target audience. Reddit posts, Slack channels, and other social platforms provided invaluable feedback and early user interest. The enthusiasm from these communities kept me motivated during tough times.
 
@@ -68,7 +68,7 @@ Users validating the idea keep you going:
 
 # Where Things Went Wrong
 
-### Organizational Chaos
+## Organizational Chaos
 
 As the project grew, so did the complexity of managing it. I was juggling multiple communication channels:
 
@@ -80,7 +80,7 @@ As the project grew, so did the complexity of managing it. I was juggling multip
 
 Without proper systems in place, this became overwhelming for a solo developer. At this point I did bring on a partner to help offload some of this work, but it was still too much for a part-time founder to handle effectively.
 
-### Underestimating Scope
+## Underestimating Scope
 
 While the "don't look too far ahead or you’ll never start anything" start-up advice has merit, I perhaps took it too literally. I went into building colive values a bit too blindly, choosing to ignore the sheer magnitude of work required to successfully pull this project off.
 

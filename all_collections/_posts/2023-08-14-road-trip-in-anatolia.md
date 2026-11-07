@@ -13,7 +13,7 @@ This trip was in January 2023, before the disastrous earthquake which shook this
 
 # Day 1 - Kapadokya
 
-![Mersin](/assets/img/article_imgs/turkey-roadtrip/0-mersin.jpg){: width="3024" height="4032" decoding="async" fetchpriority="high" srcset="/assets/img/article_imgs/turkey-roadtrip/reading/0-mersin-480.webp 480w, /assets/img/article_imgs/turkey-roadtrip/reading/0-mersin-800.webp 800w, /assets/img/article_imgs/turkey-roadtrip/reading/0-mersin-1300.webp 1300w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
+![Mersin](/assets/img/article_imgs/turkey-roadtrip/0-mersin.jpg){: width="3024" height="4032" decoding="auto" fetchpriority="high" srcset="/assets/img/article_imgs/turkey-roadtrip/reading/0-mersin-480.webp 480w, /assets/img/article_imgs/turkey-roadtrip/reading/0-mersin-800.webp 800w, /assets/img/article_imgs/turkey-roadtrip/reading/0-mersin-1300.webp 1300w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
 
 we start the journey in the mediterranean city of Mersin and hit the road going North to the heart of Anatolia.
 
