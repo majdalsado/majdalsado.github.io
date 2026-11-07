@@ -5,7 +5,6 @@ date: 2026-01-24
 categories: ["thoughts", "ai", "programming"]
 description: "ai does not spark joy in programming"
 reading_time: 2
-comments: true
 ---
 
 I feel the need to express my recent disenchantment with “programming” due to recent advancements in AI coding assistants.

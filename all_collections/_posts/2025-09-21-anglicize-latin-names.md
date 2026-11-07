@@ -6,7 +6,6 @@ categories: ["thoughts", "rant"]
 description: "why polish names get to keep their spellings but russian names don't"
 feature_image: "/assets/img/article_imgs/names/cyrillic-transform.webp"
 reading_time: 4
-comments: true
 ---
 
 I was recently reading the book _Breaking Through_ by Hungarian-American Biochemist Katalin Kariko (_a great book_). As it's a biography, Katalin naturally includes references to many Hungarian names throughout the book.

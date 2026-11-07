@@ -8,7 +8,6 @@ categories:
   - security
 description: "llm providers shouldn't decide who can perform cybersecurity tasks"
 reading_time: 5
-comments: true
 ---
 _no ai was used in writing this content._
 
