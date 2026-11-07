@@ -19,7 +19,7 @@ In a few bullet points:
 - so is capitalism, entrepreneurship
 - we need to make sure we dont waste resources sticking to outdated principles
 - evolution crafts the best version of everything -->
-![Wright Brothers catch flight, 1903](/assets/img/article_imgs/wright-brothers.webp)
+![Wright Brothers catch flight, 1903](/assets/img/article_imgs/wright-brothers.webp){: width="1234" height="800" decoding="async" fetchpriority="high"}
 I was recently browsing around on ~~Twitter~~ X where I came across [this ~~tweet~~ post:](https://x.com/pepicrft/status/1723640911022653804)
 
 > I’m reading about HTML semantics and how they are often disregarded by developers and tools when producing markup and styling, and I wonder if we are leaning too much on the side of developer ergonomics and profits over embracing the platform principles.

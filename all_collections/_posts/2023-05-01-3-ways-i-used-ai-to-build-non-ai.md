@@ -8,7 +8,7 @@ feature_image: "/assets/img/article_imgs/openai_colivevalues.png"
 feature_image_position: "95px -373px"
 reading_time: 4
 ---
-![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png)
+![colive values + openai](https://alsado.ca/assets/img/article_imgs/openai_colivevalues.png){: width="500" height="500" decoding="async" fetchpriority="high"}
 
 A couple months ago, the wave of AI/LLM breakthroughs took the world by storm and I found myself contemplating how to leverage these advances to my advantage.
 
@@ -29,7 +29,7 @@ First up is Github Copilot, a GPT-powered tool that integrates into your code ed
 Having Copilot on is like having a coding partner constantly working alongside me and pushing me along whenever I'm stumped. It analyzes my codebase and constantly provides helpful suggestions and completes my code.
 
 Here it is in action, completing code according to a comment I wrote:
-![Github Copilot in action](https://alsado.ca/assets/img/article_imgs/github-copilot.gif)
+![Github Copilot in action](https://alsado.ca/assets/img/article_imgs/github-copilot.gif){: width="710" height="188" decoding="async" loading="lazy"}
 
 This helped me focus on the harder problems and to build fast.
 
@@ -61,13 +61,13 @@ For example, when I made a mistake in my file structure, I needed ChatGPT to wri
 Here's how I was able to carefully guide it to generate the exact script I needed
 
 Initial prompt - Giving context and drawing out the problem
-![ChatGPT initial prompt](https://alsado.ca/assets/img/article_imgs/chatgpt-initial-prompt.png)
+![ChatGPT initial prompt](https://alsado.ca/assets/img/article_imgs/chatgpt-initial-prompt.png){: width="800" height="539" decoding="async" loading="lazy"}
 
 Getting ChatGPT to regurgitate what I was asking for to validate and reinforce its understanding
-![ChatGPT regurgitating](https://alsado.ca/assets/img/article_imgs/chatgpt-regurgitating.png)
+![ChatGPT regurgitating](https://alsado.ca/assets/img/article_imgs/chatgpt-regurgitating.png){: width="2154" height="1307" decoding="async" loading="lazy" srcset="/assets/img/article_imgs/reading/chatgpt-regurgitating-480.webp 480w, /assets/img/article_imgs/reading/chatgpt-regurgitating-800.webp 799w, /assets/img/article_imgs/reading/chatgpt-regurgitating-1300.webp 1300w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
 
 Tada 🎉
-![ChatGPT final script](https://alsado.ca/assets/img/article_imgs/chatgpt-final-answer.png)
+![ChatGPT final script](https://alsado.ca/assets/img/article_imgs/chatgpt-final-answer.png){: width="834" height="809" decoding="async" loading="lazy"}
 
 # #3 ⚒️ GPT-4 API, the skilled worker
 GPT-4 is the world's most advanced LLM yet, with powerful reasoning capabilities and a massive 1 trillion parameter model, 6x larger than its predecessor GPT-3.
@@ -88,7 +88,7 @@ The process was a messy one, deep in the world of jupyter scripts, pandas datafr
 But it worked.
 
 Here's GPT-4 qualifying my dataset in action:
-![GPT-4 in action](https://alsado.ca/assets/img/article_imgs/gpt4-in-action.png)
+![GPT-4 in action](https://alsado.ca/assets/img/article_imgs/gpt4-in-action.png){: width="1000" height="789" decoding="async" loading="lazy"}
 
 That took about a week where I:
 - used prompt engineering to perfect my prompts
@@ -99,7 +99,7 @@ That took about a week where I:
 - One lesson I learned quickly is that GPT-4 is **significantly** more expensive than GPT-3.5, about 20x more.
 
 Can you guess which day I ran the full dataset?
-![Expensive GPT-4 Calls](https://alsado.ca/assets/img/article_imgs/gpt4-billing.png)
+![Expensive GPT-4 Calls](https://alsado.ca/assets/img/article_imgs/gpt4-billing.png){: width="1291" height="475" decoding="async" loading="lazy"}
 
 - I also learned that it's still not perfect when not instructed carefully. I couldn't just throw my dataset at it and expect it to work well. I had to spend time engineering my prompts and testing the results.
 

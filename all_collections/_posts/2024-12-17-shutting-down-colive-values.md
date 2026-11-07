@@ -8,7 +8,7 @@ feature_image_position: "0"
 reading_time: 5
 ---
 
-![colive values banner](/assets/img/article_imgs/shutting-down-colive/cover.webp)
+![colive values banner](/assets/img/article_imgs/shutting-down-colive/cover.webp){: width="1000" height="571" decoding="async" fetchpriority="high"}
 
 **After 12 months of work and 19,314 lines of code, I’m shutting down colive values**. 
 
@@ -29,7 +29,7 @@ The coliving space was (and still is) fragmented, with communities scattered acr
 My solution? Create the ultimate platform of remote work-friendly coliving spaces, categorized in a way that matters to remote workers. (By community values, amenities available, and the location characteristics.)
 
 Some of the fragmented mess of finding a coliving. The sources varied across Google Sheets, Reddit, Twitter threads, random lists, and more:
-![the mess of finding a coliving](/assets/img/article_imgs/shutting-down-colive/coliving-mess.webp)
+![the mess of finding a coliving](/assets/img/article_imgs/shutting-down-colive/coliving-mess.webp){: width="1000" height="863" decoding="async" loading="lazy"}
 
 # What Worked Well
 
@@ -45,7 +45,7 @@ My edge came from two creative solutions:
 This worked well (besides the lawsuit scare 😅) at getting things started. Although hosts were initially skeptical, most were willing to give colive values a shot especially because I’d only reach out after we’ve already secured an interested guest looking to give them their money.
 
 Community classification in action:
-![Community classification in action](/assets/img/article_imgs/gpt4-in-action.webp)
+![Community classification in action](/assets/img/article_imgs/gpt4-in-action.webp){: width="1000" height="789" decoding="async" loading="lazy"}
 
 ### Engaging with Users
 
@@ -56,15 +56,15 @@ You’ve heard the advice to talk to users often and early, and I won’t go int
 Getting something out quickly was crucial. Instead of perfecting features, I focused on launching a basic platform that demonstrated the core value proposition. This allowed me to start gathering feedback immediately and allowed me to gain momentum to keep building. It wouldn’t have been possible to continue building on the platform without this early feedback.
 
 colive values MVP:
-![colive values live](/assets/img/article_imgs/shutting-down-colive/colive-values-view.webp)
+![colive values live](/assets/img/article_imgs/shutting-down-colive/colive-values-view.webp){: width="1000" height="920" decoding="async" loading="lazy"}
 
 #### 2. Use social channels
 
 Our best insights came from engaging directly with our target audience. Reddit posts, Slack channels, and other social platforms provided invaluable feedback and early user interest. The enthusiasm from these communities kept me motivated during tough times.
 
 Users validating the idea keep you going:
-![Users validating the idea](/assets/img/article_imgs//shutting-down-colive/reddit-validation-2.webp)
-![Users validating the idea](/assets/img/article_imgs//shutting-down-colive/reddit-validation.webp)
+![Users validating the idea](/assets/img/article_imgs//shutting-down-colive/reddit-validation-2.webp){: width="902" height="148" decoding="async" loading="lazy"}
+![Users validating the idea](/assets/img/article_imgs//shutting-down-colive/reddit-validation.webp){: width="1568" height="1116" decoding="async" loading="lazy"}
 
 # Where Things Went Wrong
 

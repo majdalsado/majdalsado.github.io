@@ -9,7 +9,7 @@ feature_image_position: "80px -70px"
 reading_time: 7
 ---
 
-![Immigration](/assets/img/article_imgs/immigration/migration.webp)
+![Immigration](/assets/img/article_imgs/immigration/migration.webp){: width="1000" height="1000" decoding="async" fetchpriority="high"}
 
 Modern-day immigration is not normal and carries with it a series of understated complexities and consequences.
 
@@ -19,7 +19,7 @@ In this article, I’d like to explore this topic and examine some of the impact
 
 To begin exploring this idea, we start at the very beginning of our relationship with migration. Humans and migration date back to when sapiens first left Africa around 100,000 years ago. Of course, these early migratory journeys differed significantly from what we observe today. 
 
-![Sapiens migrate from Africa](/assets/img/article_imgs/immigration/africa.webp)
+![Sapiens migrate from Africa](/assets/img/article_imgs/immigration/africa.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 Initially, people moved within their broader groups or tribes, travelling by foot over familiar terrain and never venturing far in a single generation.
 
@@ -27,7 +27,7 @@ Throughout most of history, we see similar migratory patterns through ancient, c
 
 This allowed for the culture and body of knowledge of the collective to remain intact, and adapt sustainably over time.
 
-![Age of Discovery](/assets/img/article_imgs/immigration/ship.webp)
+![Age of Discovery](/assets/img/article_imgs/immigration/ship.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 This all changed, however, by the Age of Discovery. The steamship revolutionized migration for humans and allowed us to leave entire continents behind, by ourselves, through one relatively short journey.
 
@@ -37,7 +37,7 @@ This is a critical shift with implications unforeseen by the migrant, which will
 
 ## The Case of the Bedouin Immigrant
 
-![Syrian Bedouin](/assets/img/article_imgs/immigration/bedouin.webp)
+![Syrian Bedouin](/assets/img/article_imgs/immigration/bedouin.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 Let’s consider the case of a Bedouin nomad from the Syrian Desert who at the turn of the 19th century, frustrated by the lack of opportunity, decided to detach from his tribe and familiar land to take a chance on the newly founded land of opportunity, America. 
 
@@ -49,7 +49,7 @@ By moving away from the areas in which a person, their parents, and ancestors ha
 
 ## So what of this “ancestral knowledge”?
 
-![Passing down knowledge](/assets/img/article_imgs/immigration/learning.webp)
+![Passing down knowledge](/assets/img/article_imgs/immigration/learning.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 It is easy to dismiss passed-down knowledge and wisdom when the Internet gives us instant access to human knowledge at our fingertips.
 
@@ -66,7 +66,7 @@ Beyond the fact that this knowledge has withstood the test of time, this knowled
 
 ## Generalization of Knowledge
 
-![Traditional Healer](/assets/img/article_imgs/immigration/traditional_healer.webp)
+![Traditional Healer](/assets/img/article_imgs/immigration/traditional_healer.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 We must also recognize that the information readily available online or imparted in Western education largely stems from Eurocentric sources. These can be different or not aligned with the experiences of people from a non-European ethnicity. 
 
@@ -76,7 +76,7 @@ This discrepancy is becoming more apparent in fields like medicine, where an exp
 
 So when our Bedouin Immigrant decided to disrupt his existing life, he detached himself from the trusted body of knowledge that had allowed his bloodline to live and thrive up until this point and made his potential success dependent on this compatibility with the American way of life.
 
-![Accessing medicine](/assets/img/article_imgs/immigration/medicine.webp)
+![Accessing medicine](/assets/img/article_imgs/immigration/medicine.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 Now, when the immigrant is faced with a health problem or a stressful event, there is no tribe elder to turn to who can explain what they’re feeling and why. There is no one with the repository of knowledge for the best way that his people have typically dealt with that problem.
 
@@ -86,7 +86,7 @@ Not being able to find the right help tailored to their needs can lead to aliena
 
 ## The Shared Experience of Immigrants
 
-![Crossroads](/assets/img/article_imgs/immigration/crossroads.webp)
+![Crossroads](/assets/img/article_imgs/immigration/crossroads.webp){: width="1000" height="814" decoding="async" loading="lazy"}
 
 Growing up, I felt lucky to have full plasticity to dictate how I’d like to lead my life. I was setting a new example for our generation in a new society. But there is more to it than meets the eye. Growing up with this idea adds a stressor that you constantly feel. 
 
@@ -106,7 +106,7 @@ What would it be like to be around those who understood my thinking and personal
 
 ## Immigration in the Modern World
 
-![World-wide Immigration](/assets/img/article_imgs/immigration/world_migration.webp)
+![World-wide Immigration](/assets/img/article_imgs/immigration/world_migration.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 Immigration has become normalized and increasingly popular in the past couple of centuries, possibly due to globalization and the rise of the internet. In 2022 alone, an estimated [6.1 million people](https://www.oecd-ilibrary.org/sites/b0f40584-en/1/3/1/index.html?itemId=/content/publication/b0f40584-en&_csp_=f32aa69b63450530407ffa5853cb88a4&itemIGO=oecd&itemContentType=book) took that journey, and it seems we now believe it is normal to move across vast distances and start life in a new environment, with little to no consideration of how it may affect our body and mind. 
 
@@ -136,7 +136,7 @@ At the same time, host countries should also re-examine their immigration polici
 
 This creates instability over the long term if ignored. Perhaps exploring more sustainable integration models such as establishing cultural hubs or backing community initiatives could help here. These efforts would not only aid the immigrants but also serve to enhance the host societies’ cultural richness.
 
-![Tree of Learning](/assets/img/article_imgs/immigration/knowledge.webp)
+![Tree of Learning](/assets/img/article_imgs/immigration/knowledge.webp){: width="1000" height="1000" decoding="async" loading="lazy"}
 
 I hope this leads us one step closer to understanding what we’re feeling, how we got here, and where we’re going. 
 

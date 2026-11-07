@@ -92,7 +92,7 @@ As I got older though, I felt that craving for novelty start to fade. The bar fo
 
 The equation changed, it feels as if expected value of trying something new went down.
 
-![ev](/assets/img/is-most-change-bad/ev-d09705.webp)
+![ev](/assets/img/is-most-change-bad/ev-d09705.webp){: width="1302" height="628" decoding="async" loading="lazy"}
 
 **Our mind protects its perceived ability to survive. Aversion to change is a mechanism which achieves that.**
 

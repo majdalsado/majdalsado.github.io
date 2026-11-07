@@ -31,7 +31,7 @@ TikTok was the first algorithm that truly tailored to the user, not giving them 
 - The success of tiktok tripped an arms race of all social media apps to follow its footsteps and abandon the social aspect of social media.
  -->
 
-![TikTok is getting banned](/assets/img/article_imgs/tiktok/tiktok-search.webp)
+![TikTok is getting banned](/assets/img/article_imgs/tiktok/tiktok-search.webp){: width="1000" height="700" decoding="async" loading="lazy"}
 
 With talks of TikTok having to shut down in the US, I wanted to take a moment to reflect on the impact the app had on social media, and online media in general.
 
@@ -50,7 +50,7 @@ In the early days of social media, the focus was on your social circle, and reco
 
 On Instagram for example, your friends used to have access to a feed where they could see what you've been interacting with on the app, and Instagram would then use these social signals to tailor your algorithm.
 
-![Instagram feed](/assets/img/article_imgs/tiktok/activity-feed.webp)
+![Instagram feed](/assets/img/article_imgs/tiktok/activity-feed.webp){: width="330" height="412" decoding="async" loading="lazy"}
 
 While this was great as a social experience, it also added a potential stigma to interacting with something outside your social norms. Hence, it never really gave insight into your inner desires.
 
@@ -86,7 +86,7 @@ It's interesting to note, however, that often when we seek a creative experience
 
 In art school, students are often assigned "slow-looking" exercises, where they spend hours staring at and contemplating a single painting to appreciate fully its depth and nuances.
 
-![slow-looking exercise](/assets/img/article_imgs/tiktok/staring.webp)
+![slow-looking exercise](/assets/img/article_imgs/tiktok/staring.webp){: width="1000" height="666" decoding="async" loading="lazy"}
 
 Maybe this is why we generally find TikTok less fulfilling as an artistic experience. You never get longer than a few seconds to appreciate the artist's vision.
 

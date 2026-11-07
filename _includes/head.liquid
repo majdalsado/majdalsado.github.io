@@ -2,20 +2,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap"
-    rel="stylesheet" />
-  {% if page.layout == "post" %}
-  <title>{{page.title}} | {{site.title}}</title>
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/post.css" />
-  {% else %}
-  <title>{{site.title}} | {{page.title}}</title>
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/blog.css" />
-  {%endif%}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/common.css" />
-  <script src="{{site.baseurl}}/assets/js/categories.js"></script>
+  <title>{% if page.layout == "post" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ page.title }}{% endif %}</title>
+  <link rel="preload" href="/assets/fonts/newsreader-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <style>
+    {% include css/fonts.css %}
+    {% if page.layout == "post" %}{% include css/post.css %}{% else %}{% include css/blog.css %}{% endif %}
+    {% include css/common.css %}
+  </style>
+  <script defer src="{{site.baseurl}}/assets/js/categories.js"></script>
   {% if page.layout == "post" %}
   <script defer src="{{site.baseurl}}/assets/js/lbox.js"></script>
   {% endif %}
@@ -37,13 +31,18 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="{{site.baseurl}}/assets/favicon/site.webmanifest">
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MK3YFTLCD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-8MK3YFTLCD');
+    window.addEventListener('load', function () {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8MK3YFTLCD';
+      document.head.appendChild(script);
+    }, { once: true });
   </script>
 
 </head>

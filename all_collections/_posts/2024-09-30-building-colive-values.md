@@ -9,7 +9,7 @@ feature_image_position: "0"
 reading_time: 3
 ---
 
-![colive values](/assets/img/article_imgs/colive-values.png)
+![colive values](/assets/img/article_imgs/colive-values.png){: width="2048" height="1536" decoding="async" fetchpriority="high" srcset="/assets/img/article_imgs/reading/colive-values-480.webp 480w, /assets/img/article_imgs/reading/colive-values-800.webp 800w, /assets/img/article_imgs/reading/colive-values-1300.webp 1300w" sizes="(max-width: 698px) calc(100vw - 48px), 650px"}
 ### preface: where the idea came from
 
 When I first started thinking about [colive values](https://colivevalues.com), I wasn’t looking for a simple side project to tinker with. This was my first project with quite an ambitious goal: 

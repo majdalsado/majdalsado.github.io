@@ -122,7 +122,7 @@ For example, ICAO could mandate that each language create a mapping table for En
 
 ICAO already does this for many non-Latin characters coming from languages like Russian, Chinese, etc., so this should easily be made to cover all languages
 
-![ICAO Document 9303](/assets/img/article_imgs/names/transliteration-cyrillic.webp)
+![ICAO Document 9303](/assets/img/article_imgs/names/transliteration-cyrillic.webp){: width="1000" height="792" decoding="async" loading="lazy"}
 
 Although it's too late for the millions affected, I don't think it's too late to make a change for the future.
 

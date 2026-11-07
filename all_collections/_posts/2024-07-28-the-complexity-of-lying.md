@@ -48,7 +48,7 @@ These constraints on top of our pre-existing mental biases, environment and cons
 
 Take for example a social situation. When you observe something, there's a sort of processing layer in which that event goes through to come up with a decision on how you'd like to act next. 
 
-![decision cycle](/assets/img/article_imgs/decision-cycle.png)
+![decision cycle](/assets/img/article_imgs/decision-cycle.png){: width="960" height="540" decoding="async" loading="lazy"}
 
 This layer considers the context of the situation, logic, strategy, social norms, etiquette, relevance, and much more. 
 
@@ -61,7 +61,7 @@ I believe maintaining a lie consumes an unworthy portion of mental energy. While
 
 As these lies accumulate, you find yourself constructing stories, detached from reality, that are inherently fragile. This not only consumes your cognitive resources but also distracts you from more valuable functions. The mental effort required to sustain a lie is far greater than that needed to uphold the truth.
 
-![truth vs lie](/assets/img/article_imgs/truth.png)
+![truth vs lie](/assets/img/article_imgs/truth.png){: width="960" height="540" decoding="async" loading="lazy"}
 This is why I choose to avoid lying at all costs.
 
 ## The Simplicity of Truth
